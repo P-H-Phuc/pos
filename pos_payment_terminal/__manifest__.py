@@ -23,7 +23,7 @@
 
 {
     'name': 'POS Payment Terminal',
-    'version': '0.1',
+    'version': '8.0.0.1.0',
     'category': 'Point Of Sale',
     'summary': 'Manage Payment Terminal device from POS front end',
     'author': "Aurélien DUMAINE,Akretion,Odoo Community Association (OCA)",
@@ -35,4 +35,5 @@
         ],
     'demo': ['pos_payment_terminal_demo.xml'],
     'qweb': ['static/src/xml/pos_payment_terminal.xml'],
+    'installable': False,
 }
