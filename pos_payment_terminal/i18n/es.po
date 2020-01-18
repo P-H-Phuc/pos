@@ -10,22 +10,28 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-01 02:01+0000\n"
-"PO-Revision-Date: 2018-03-01 02:01+0000\n"
-"Last-Translator: enjolras <yo@miguelrevilla.com>, 2018\n"
+"PO-Revision-Date: 2020-07-27 11:19+0000\n"
+"Last-Translator: Daniel Martinez Vila <daniel.martinez@qubiq.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: pos_payment_terminal
-#: selection:account.journal,payment_mode:0
+#: model:ir.model.fields,help:pos_payment_terminal.field_pos_config__iface_payment_terminal
+msgid "A payment terminal is available on the Proxy"
+msgstr "Un terminal de pago está disponible en el Proxy"
+
+#. module: pos_payment_terminal
+#: selection:account.journal,pos_terminal_payment_mode:0
 msgid "Card"
 msgstr "Tarjeta"
 
 #. module: pos_payment_terminal
-#: selection:account.journal,payment_mode:0
+#: selection:account.journal,pos_terminal_payment_mode:0
 msgid "Check"
 msgstr "Talón"
 
@@ -35,17 +41,24 @@ msgid "Journal"
 msgstr "Diario"
 
 #. module: pos_payment_terminal
-#: model:ir.model.fields,field_description:pos_payment_terminal.field_account_journal_payment_mode
-msgid "Payment Mode"
-msgstr "Forma de pago"
+#: model:ir.model.fields,field_description:pos_payment_terminal.field_pos_config__iface_payment_terminal
+#: model_terms:ir.ui.view,arch_db:pos_payment_terminal.view_pos_config_form
+msgid "Payment Terminal"
+msgstr "Terminal de pago"
+
+#. module: pos_payment_terminal
+#: model:ir.model,name:pos_payment_terminal.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del punto de venta"
 
 #. module: pos_payment_terminal
 #: model:ir.model,name:pos_payment_terminal.model_pos_order
 msgid "Point of Sale Orders"
-msgstr ""
+msgstr "Pedidos de Punto de Venta"
 
 #. module: pos_payment_terminal
-#: model:ir.model.fields,help:pos_payment_terminal.field_account_journal_payment_mode
+#: model:ir.model.fields,help:pos_payment_terminal.field_account_bank_statement_import_journal_creation__pos_terminal_payment_mode
+#: model:ir.model.fields,help:pos_payment_terminal.field_account_journal__pos_terminal_payment_mode
 msgid "Select the payment mode sent to the payment terminal"
 msgstr "Seleccione la forma de pega enviada al terminal de pago"
 
@@ -57,6 +70,10 @@ msgid "Start transaction"
 msgstr "Iniciar transacción"
 
 #. module: pos_payment_terminal
-#: model:ir.model,name:pos_payment_terminal.model_pos_config
-msgid "pos.config"
-msgstr "Configuración del TPV"
+#: model:ir.model.fields,field_description:pos_payment_terminal.field_account_bank_statement_import_journal_creation__pos_terminal_payment_mode
+#: model:ir.model.fields,field_description:pos_payment_terminal.field_account_journal__pos_terminal_payment_mode
+msgid "Terminal Payment Mode"
+msgstr "Modo de pago del terminal"
+
+#~ msgid "pos.config"
+#~ msgstr "Configuración del TPV"
