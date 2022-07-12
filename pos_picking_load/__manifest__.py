@@ -4,10 +4,10 @@
 {
     'name': 'Point Of Sale - Picking Load',
     'summary': "Load and confirm stock pickings via Point Of Sale",
-    'version': '12.0.1.0.2',
+    'version': '12.0.1.0.3',
     'category': 'Point Of Sale',
     'author': 'GRAP,Odoo Community Association (OCA)',
-    'website': 'https://www.github.com/OCA/pos',
+    'website': 'https://github.com/OCA/pos',
     'license': 'AGPL-3',
     'maintainers': ['legalsylvain'],
     'development_status': 'Beta',
