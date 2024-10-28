@@ -9,15 +9,19 @@ class PosPlace(models.Model):
     _name = "pos.place"
     _description = "Point of Sale Places"
 
-    def _default_company_id(self):
-        return self.env.user.company_id.id
+    code = fields.Char(
+        required=True, help="Short text, used on little screen, in responsive mode"
+    )
 
-    code = fields.Char(required=True, size=6)
-
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, help="Complete name, used on normal screen")
 
     active = fields.Boolean(default=True)
 
     company_id = fields.Many2one(
-        string="Company", comodel_name="res.company", default=_default_company_id
+        string="Company",
+        comodel_name="res.company",
+        default=lambda x: x._default_company_id(),
     )
+
+    def _default_company_id(self):
+        return self.env.company

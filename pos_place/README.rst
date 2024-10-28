@@ -29,7 +29,7 @@ Point of Sale - Places
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module extends the functionality of point of sale to support saling
-in the street using the point of sale and to allow you to mention on the
+in various places using the point of sale and to allow you to mention on the
 pos order, the place where the seller is for the time being.
 
 For that purpose, it introduce a new model ``pos.place``.
@@ -59,14 +59,13 @@ To use this module, you need to
 
 * open the point of sale
 
-* Click on 'Place' Button and select the place where you are
+* Click on 'Select Place' Button and select the place where you are
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_place/static/description/pos_front_end_ui.png
 
 * All the next Pos Order will be related to this place.
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_place/static/description/pos_order_tree.png
-
 
 * You can then, make statistic over best places
 
