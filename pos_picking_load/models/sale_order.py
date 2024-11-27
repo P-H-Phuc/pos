@@ -2,12 +2,15 @@
 # @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, fields
+from odoo import fields, models
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
     final_pos_order_id = fields.Many2one(
-        string='Final PoS Order', comodel_name='pos.order', readonly=True,
-        help="This Sale Order has beend replaced by this PoS Order")
+        string="Final PoS Order",
+        comodel_name="pos.order",
+        readonly=True,
+        help="This Sale Order has beend replaced by this PoS Order",
+    )

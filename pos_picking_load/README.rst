@@ -17,13 +17,13 @@ Point Of Sale - Picking Load
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github
-    :target: https://github.com/OCA/pos/tree/12.0/pos_picking_load
+    :target: https://github.com/OCA/pos/tree/16.0/pos_picking_load
     :alt: OCA/pos
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/pos-12-0/pos-12-0-pos_picking_load
+    :target: https://translation.odoo-community.org/projects/pos-16-0/pos-16-0-pos_picking_load
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=12.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=16.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -59,7 +59,7 @@ To configure this module, you need to:
 #. Select the picking type(s) you want to see in the point of sale
 #. Check the box 'Available in Point of Sale'
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/stock_picking_type_form.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/stock_picking_type_form.png
    :width: 800 px
 
 Note: This box is NOT enabled by default except in demo data for the type
@@ -70,7 +70,7 @@ Note: This box is NOT enabled by default except in demo data for the type
 #. Check the box 'Load Pickings'
 #. Set the max quantity of pickings you want to load
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/pos_config_form.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/pos_config_form.png
    :width: 800 px
 
 Note: This box is enabled by default
@@ -103,25 +103,25 @@ To use this module, you need to:
 * Launch the point of sale
 * On a new order (without lines), click on the 'Load Picking' button.
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_01_load_button.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_01_load_button.png
    :width: 800 px
 
 * Point of sale will load available pickings. (About displayed pickings, see
   'Technical Notes' section).
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_02_picking_list.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_02_picking_list.png
    :width: 800 px
 
 * Click on a picking will check if the picking is loadable and if yes, will
   display a 'Select' button. (See 'Possible Warnings' Section)
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_03_confirm.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_03_confirm.png
    :width: 800 px
 
 * Confirm the selection, by clicking on 'Select' button. It will display
   the content of the moves (as PoS Order Lines)
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_04_pos_order.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_04_pos_order.png
    :width: 800 px
 
 The price and the discount will be the sale price and the discount set in
@@ -131,12 +131,12 @@ loaded in the Point of Sale.
 
 **Related Sale Order:**
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_sale_order.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_sale_order.png
    :width: 800 px
 
 **Related Picking:**
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_stock_picking.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_stock_picking.png
    :width: 800 px
 
 
@@ -155,17 +155,17 @@ Some warning messages can appear:
 
 * if some products are not available in the Point of Sale
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_warning_product.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_warning_product.png
    :width: 800 px
 
 * if the partner is not available in the Point of Sale
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_warning_partner.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_warning_partner.png
    :width: 800 px
 
 * if the picking has been still loaded in another PoS order
 
-.. figure:: https://raw.githubusercontent.com/OCA/pos/12.0/pos_picking_load/static/description/load_picking_warning_picking_still_loaded.png
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_picking_load/static/description/load_picking_warning_picking_still_loaded.png
    :width: 800 px
 
 Known issues / Roadmap
@@ -186,7 +186,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/pos/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_picking_load%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_picking_load%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -225,6 +225,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-legalsylvain| 
 
-This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/12.0/pos_picking_load>`_ project on GitHub.
+This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/16.0/pos_picking_load>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
