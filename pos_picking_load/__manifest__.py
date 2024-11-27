@@ -4,7 +4,7 @@
 {
     "name": "Point Of Sale - Picking Load",
     "summary": "Load and confirm stock pickings via Point Of Sale",
-    "version": "12.0.1.0.3",
+    "version": "16.0.1.0.0",
     "category": "Point Of Sale",
     "author": "GRAP,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/pos",
@@ -20,17 +20,23 @@
         "views/view_sale_order.xml",
         "views/view_stock_picking.xml",
         "views/view_stock_picking_type.xml",
-        "views/pos_picking_load.xml",
     ],
-    "demo": [
-        "demo/res_groups.xml",
-        "demo/res_partner.xml",
-        "demo/product_template.xml",
-        "demo/sale_order.xml",
-        "demo/stock_picking_type.xml",
-    ],
-    "qweb": [
-        "static/src/xml/pos_picking_load.xml",
-    ],
+    "assets": {
+        "point_of_sale.assets": [
+            "/pos_picking_load/static/src/css/pos_picking_load.css",
+            "/pos_picking_load/static/src/js/LoadPickingButtonWidget.js",
+            "/pos_picking_load/static/src/xml/LoadPickingButtonWidget.xml",
+            "/pos_picking_load/static/src/xml/screen/LoadPickingScreenWidget.xml",
+            "/pos_picking_load/static/src/xml/screen/PickingLoadControlPanel.xml",
+            "/pos_picking_load/static/src/xml/screen/PickingLoadList.xml",
+            "/pos_picking_load/static/src/xml/screen/PickingLoadRow.xml",
+            "/pos_picking_load/static/src/js/Screen/LoadPickingScreenWidget.js",
+            "/pos_picking_load/static/src/js/Screen/PickingLoadControlPanel.js",
+            "/pos_picking_load/static/src/js/Screen/PickingLoadFetcher.js",
+            "/pos_picking_load/static/src/js/Screen/PickingLoadList.js",
+            "/pos_picking_load/static/src/js/Screen/PickingLoadRow.js",
+            "/pos_picking_load/static/src/js/db.js",
+        ]
+    },
     "installable": True,
 }

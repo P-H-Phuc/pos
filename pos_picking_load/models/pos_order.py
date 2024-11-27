@@ -14,19 +14,19 @@ class PosOrder(models.Model):
     )
 
     # Overloadable Section
-    @api.multi
     def _handle_orders_with_original_picking(self):
         """By default, the module cancel the original stock picking and
         set the original sale order as invoiced.
         Overload / Overwrite this function if you want another
         behaviour"""
         for order in self:
+            origin_picking_id = order.origin_picking_id
             # Cancel Picking
-            order.origin_picking_id.action_cancel()
-            order.origin_picking_id.write({"final_pos_order_id": order.id})
+            origin_picking_id.action_cancel()
+            origin_picking_id.write({"final_pos_order_id": order.id})
 
             # Set Sale Order as fully invoiced
-            order.origin_picking_id.mapped("group_id.sale_id").write(
+            origin_picking_id.mapped("group_id.sale_id").write(
                 {
                     "invoice_status": "invoiced",
                 }
@@ -34,12 +34,13 @@ class PosOrder(models.Model):
 
     # Overload Section
     @api.model
-    def create_from_ui(self, orders):
+    def create_from_ui(self, orders, draft=False):
         """Cancel the original picking, when the pos order is done"""
-        res = super().create_from_ui(orders)
+        res = super().create_from_ui(orders, draft)
+        pos_order_ids = [rec["id"] for rec in res]
         orders_with_original_picking = self.search(
             [
-                ("id", "in", res),
+                ("id", "in", pos_order_ids),
                 ("origin_picking_id", "!=", False),
                 ("state", "!=", "draft"),
             ]
@@ -56,7 +57,6 @@ class PosOrder(models.Model):
             res["origin_picking_id"] = ui_order["origin_picking_id"]
         return res
 
-    @api.multi
     def create_picking(self):
         """Call super() for each order separately with the origin picking id
         in the context. The new picking will be updated accordingly in the

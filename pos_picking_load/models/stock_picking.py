@@ -49,9 +49,10 @@ class StockPicking(models.Model):
             pos_session_id
         ) + self._prepare_filter_query_for_pos(pos_session_id, query)
         fields = self._prepare_fields_for_pos_list()
-        return self.search_read(
+        res = self.search_read(
             condition, fields, limit=config.iface_load_picking_max_qty
         )
+        return res
 
     # Custom Section - Load Picking Part
     @api.model
@@ -72,7 +73,7 @@ class StockPicking(models.Model):
     def load_picking_for_pos(self, picking_id):
         picking = self.browse(picking_id)
         picking_lines = []
-        for move in picking.move_lines.filtered(lambda x: x.state != "cancel"):
+        for move in picking.move_ids.filtered(lambda x: x.state != "cancel"):
             picking_lines.append(self._prepare_line_data_from_stock_move(move))
         return {
             "id": picking.id,
@@ -81,14 +82,12 @@ class StockPicking(models.Model):
             "line_ids": picking_lines,
         }
 
-    @api.multi
     def update_from_origin_picking(self, origin_picking):
         if origin_picking.group_id:
             self.filtered(lambda p: not p.group_id).write(
                 {"group_id": origin_picking.group_id.id}
             )
 
-    @api.multi
     def action_confirm(self):
         """Assign to same procurement group as the origin picking"""
         if self.env.context.get("origin_picking_id"):
