@@ -12,5 +12,5 @@ class ProductTemplate(models.Model):
         digits="Product Unit of Measure",
         help="Set here Constant tare weight"
         " for the given product. This tare will be subtracted when"
-        " the product is weighted",
+        " the product is weighed.",
     )
