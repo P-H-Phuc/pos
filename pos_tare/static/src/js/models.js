@@ -24,6 +24,11 @@ odoo.define("pos_tare.models", function (require) {
             // /////////////////////////////
             constructor(obj, options) {
                 super(obj, options);
+                if (options.json) {
+                    // The object has already been initialized by a call to
+                    // .init_from_JSON() in the parent's constructor.
+                    return;
+                }
                 this.tare = 0;
             }
 
@@ -33,8 +38,8 @@ odoo.define("pos_tare.models", function (require) {
             }
 
             clone() {
-                let order_line = super.clone();
-                order_line = this.tare;
+                const order_line = super.clone();
+                order_line.tare = this.tare;
                 return order_line;
             }
 
