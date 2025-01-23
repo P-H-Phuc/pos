@@ -20,7 +20,7 @@
     ],
     "assets": {
         "point_of_sale.assets": [
-            "pos_tare/static/src/css/*.css",
+            "pos_tare/static/src/scss/*.scss",
             "pos_tare/static/src/js/**/*.js",
             "pos_tare/static/src/xml/**/*.xml",
         ],
