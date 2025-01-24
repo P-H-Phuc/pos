@@ -4,10 +4,10 @@ Overloading existing PoS objects
 
 /*
 Change the design of the numpad in the product-screen. Because this module
-adds a Tare button between the decimal sign button and the backspace button,
-the backspace button goes onto a new line. To make it more consistent, make
-the payment button span 4 lines instead of 3 and make the backspace span 4
-columns to avoid empty space.
+adds a Tare button between the quantity button and the discount button in the
+last column, the backspace button goes onto a new line. To make it more
+consistent, make the payment button span 4 lines instead of 3 and make the
+backspace span 4 columns to avoid empty space.
 */
 
 .pos .product-screen .actionpad .button.pay {
