@@ -82,7 +82,6 @@ const TareProductScreen = (ProductScreen_) =>
         }
 
         _setValue(val) {
-            super._setValue(val);
             if (this.currentOrder.get_selected_orderline()) {
                 if (this.env.pos.numpadMode === "tare") {
                     if (this.env.pos.config.iface_tare_method === "barcode") {
@@ -107,6 +106,16 @@ const TareProductScreen = (ProductScreen_) =>
                             });
                         }
                     }
+                } else if (this.env.pos.numpadMode === "quantity") {
+                    const orderline = this.currentOrder.get_selected_orderline();
+                    const tare = orderline.get_tare();
+                    orderline.reset_tare();
+                    super._setValue(val);
+                    if (tare > 0) {
+                        orderline.set_tare(tare, true);
+                    }
+                } else {
+                    super._setValue(val);
                 }
             }
         }
