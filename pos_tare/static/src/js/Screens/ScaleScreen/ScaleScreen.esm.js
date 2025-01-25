@@ -12,6 +12,8 @@ const TareScaleScreen = (ScaleScreen_) =>
                 tare: this.props.product.tare_weight || "",
                 weight: 0,
                 gross_weight: "",
+                gross_weight_input_valid: true,
+                tare_input_valid: true,
             });
             this.updateWeight();
             if (this.env.pos.config.iface_tare_method === "barcode") {
@@ -42,6 +44,8 @@ const TareScaleScreen = (ScaleScreen_) =>
         }
 
         updateWeight() {
+            this.state.gross_weight_input_valid = !isNaN(this.state.gross_weight);
+            this.state.tare_input_valid = !isNaN(this.state.tare);
             this.state.weight = this.state.gross_weight - this.state.tare;
         }
 

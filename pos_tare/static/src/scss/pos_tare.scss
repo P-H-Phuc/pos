@@ -76,3 +76,7 @@ New style for new scale objects
     outline: none;
     box-shadow: 0px 0px 0px 3px #6ec89b;
 }
+
+.pos .scale-screen .input-weight.invalid-input {
+    background-color: #f66;
+}
