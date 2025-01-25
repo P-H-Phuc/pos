@@ -14,9 +14,9 @@ class PosConfig(models.Model):
         default="both",
         required=True,
         help="Select tare method:\n"
-        "* 'manual' : the scale screen has an extra tare input field;\n"
-        "* 'barecode' : (scan a barcode to tare the selected order line;\n"
-        "* 'both' : manual input and barcode methods are enabled;",
+        "* 'manual': the scale screen has an extra tare input field;\n"
+        "* 'barcode': scan a barcode to tare the selected order line;\n"
+        "* 'both': manual input and barcode methods are enabled;",
     )
 
     iface_gross_weight_method = fields.Selection(
