@@ -26,8 +26,15 @@ const TareProductScreen = (ProductScreen_) =>
 
         async _getAddProductOptions(product, code) {
             const payload = await super._getAddProductOptions(product, code);
-            if (!payload) return;
-            if (!payload.quantity) return payload;
+            if (!payload) {
+                return;
+            }
+            if (!payload.quantity) {
+                if (product.tare_weight) {
+                    payload.tare = product.tare_weight;
+                }
+                return payload;
+            }
 
             const {weight, tare} = payload.quantity;
             return {
@@ -37,16 +44,23 @@ const TareProductScreen = (ProductScreen_) =>
             };
         }
 
-        _setTareOnLastOrderLine(tare) {
+        _setTareOnLastOrderLine(tare, updateNetWeight = false) {
             if (tare > 0) {
                 const orderline = this.currentOrder.get_last_orderline();
-                orderline.set_tare(tare, false);
+                orderline.set_tare(tare, updateNetWeight);
             }
         }
 
         async _addProduct(product, options) {
-            if (!product.to_weight || !this.env.pos.config.iface_electronic_scale) {
+            if (!product.to_weight) {
                 return super._addProduct(product, options);
+            }
+            if (!this.env.pos.config.iface_electronic_scale) {
+                super._addProduct(product, options);
+                // This product is added with a default quantity. If there is
+                // a tare, it should be subtracted from that quantity.
+                this._setTareOnLastOrderLine(options.tare, true);
+                return;
             }
             if (isNaN(options.tare)) {
                 this.showPopup("ErrorPopup", {
