@@ -3,6 +3,7 @@
 import {onMounted, useState} from "@odoo/owl";
 import {Component} from "point_of_sale.Registries";
 import ScaleScreen from "point_of_sale.ScaleScreen";
+import {useBarcodeReader} from "point_of_sale.custom_hooks";
 
 const TareScaleScreen = (ScaleScreen_) =>
     class extends ScaleScreen_ {
@@ -16,6 +17,11 @@ const TareScaleScreen = (ScaleScreen_) =>
                 tare_input_valid: true,
             });
             this.updateWeight();
+            if (this.env.pos.config.iface_tare_method !== "manual") {
+                useBarcodeReader({
+                    tare: this._barcodeTareAction,
+                });
+            }
             if (this.env.pos.config.iface_tare_method === "barcode") {
                 return;
             }
@@ -29,6 +35,10 @@ const TareScaleScreen = (ScaleScreen_) =>
                 target.selectionStart = 0;
                 target.selectionEnd = target.value.length;
             });
+        }
+
+        async _barcodeTareAction(code) {
+            this.state.tare = code.value;
         }
 
         _readScale() {

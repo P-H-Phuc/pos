@@ -16,6 +16,9 @@ const TareProductScreen = (ProductScreen_) =>
         }
 
         async _barcodeTareAction(code) {
+            if (this.env.pos.tempScreenIsShown) {
+                return;
+            }
             try {
                 this.currentOrder.get_selected_orderline().set_tare(code.value, true);
             } catch (error) {
