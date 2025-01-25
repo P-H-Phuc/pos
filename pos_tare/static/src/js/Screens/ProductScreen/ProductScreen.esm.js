@@ -8,9 +8,11 @@ const TareProductScreen = (ProductScreen_) =>
     class extends ProductScreen_ {
         setup() {
             super.setup();
-            useBarcodeReader({
-                tare: this._barcodeTareAction,
-            });
+            if (this.env.pos.config.iface_tare_method !== "manual") {
+                useBarcodeReader({
+                    tare: this._barcodeTareAction,
+                });
+            }
         }
 
         async _barcodeTareAction(code) {
