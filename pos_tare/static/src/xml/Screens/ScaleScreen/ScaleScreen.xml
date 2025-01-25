@@ -14,7 +14,7 @@
                             class="input-weight"
                             id="input_gross_weight"
                             t-model="state.gross_weight"
-                            placeholder="0.000"
+                            placeholder="0"
                             disabled="1"
                         />
                         <t t-out="env.pos.config.iface_tare_uom_id[1]" />
@@ -27,8 +27,8 @@
                             class="input-weight"
                             id="input_gross_weight"
                             t-model="state.gross_weight"
-                            t-on-change="updateWeight"
-                            placeholder="0.000"
+                            t-on-input="updateWeight"
+                            placeholder="0"
                         />
                         <t t-out="env.pos.config.iface_tare_uom_id[1]" />
                     </div>
@@ -42,8 +42,8 @@
                         t-model="state.tare"
                         class="input-weight"
                         id="input_weight_tare"
-                        placeholder="0.000"
-                        t-on-change="updateWeight"
+                        placeholder="0"
+                        t-on-input="updateWeight"
                     />
                     <t t-out="env.pos.config.iface_tare_uom_id[1]" />
                 </div>

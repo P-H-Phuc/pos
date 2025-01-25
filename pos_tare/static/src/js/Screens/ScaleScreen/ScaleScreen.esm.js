@@ -1,20 +1,32 @@
 /** @odoo-module **/
 
+import {onMounted, useState} from "@odoo/owl";
 import {Component} from "point_of_sale.Registries";
 import ScaleScreen from "point_of_sale.ScaleScreen";
-import {useAutoFocusToLast} from "point_of_sale.custom_hooks";
-import {useState} from "@odoo/owl";
 
 const TareScaleScreen = (ScaleScreen_) =>
     class extends ScaleScreen_ {
         setup() {
             super.setup();
             this.state = useState({
-                tare: this.props.product.tare_weight,
+                tare: this.props.product.tare_weight || "",
                 weight: 0,
-                gross_weight: 0,
+                gross_weight: "",
             });
-            useAutoFocusToLast({selector: "#input_weight_tare"});
+            this.updateWeight();
+            if (this.env.pos.config.iface_tare_method === "barcode") {
+                return;
+            }
+            let selector = "#input_weight_tare";
+            if (this.env.pos.config.iface_gross_weight_method === "manual") {
+                selector = "#input_gross_weight";
+            }
+            onMounted(() => {
+                const target = this.el.querySelectorAll(selector)[0];
+                target.focus();
+                target.selectionStart = 0;
+                target.selectionEnd = target.value.length;
+            });
         }
 
         _readScale() {
