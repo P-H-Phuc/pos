@@ -1,21 +1,8 @@
 /** @odoo-module **/
 
-import {Order, Orderline} from "point_of_sale.models";
 import {convert_mass, format_tare} from "./tools.esm";
 import {Model} from "point_of_sale.Registries";
-
-const TareOrder = (Order_) =>
-    class extends Order_ {
-        add_product(product, options) {
-            const res = super.add_product(product, options);
-            if (options.tare !== undefined) {
-                this.get_last_orderline().set_tare(options.tare);
-            }
-            return res;
-        }
-    };
-
-Model.extend(Order, TareOrder);
+import {Orderline} from "point_of_sale.models";
 
 const TareOrderline = (Orderline_) =>
     class extends Orderline_ {
