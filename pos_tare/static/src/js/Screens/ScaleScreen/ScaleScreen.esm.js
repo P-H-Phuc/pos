@@ -22,12 +22,12 @@ const TareScaleScreen = (ScaleScreen_) =>
                     tare: this._barcodeTareAction,
                 });
             }
-            if (this.env.pos.config.iface_tare_method === "barcode") {
-                return;
-            }
             let selector = "#input_weight_tare";
             if (this.env.pos.config.iface_gross_weight_method === "manual") {
                 selector = "#input_gross_weight";
+            } else if (this.env.pos.config.iface_tare_method === "barcode") {
+                // No fields to focus.
+                return;
             }
             onMounted(() => {
                 const target = this.el.querySelectorAll(selector)[0];
@@ -35,6 +35,10 @@ const TareScaleScreen = (ScaleScreen_) =>
                 target.selectionStart = 0;
                 target.selectionEnd = target.value.length;
             });
+        }
+
+        get gross_uom() {
+            return this.env.pos.units_by_id[this.props.product.uom_id[0]];
         }
 
         async _barcodeTareAction(code) {

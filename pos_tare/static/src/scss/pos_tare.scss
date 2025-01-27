@@ -28,55 +28,32 @@ content multiple lines*/
 New style for new scale objects
 ****************************************************************/
 
-.pos .scale-screen .weight-label {
-    font-size: 25px;
-    margin: 16px;
-    text-align: center;
-    display: inline-block;
-    width: 40%;
-    margin-bottom: 0px;
+.pos .scale-screen .computed-price.weight-value {
+    margin-bottom: 0;
+    box-shadow: none;
 }
 
-.pos .scale-screen .weight-value {
-    font-size: 25px;
-    display: inline-block;
-    margin: 16px;
-    margin-top: 0px;
-    padding: 16px;
-    width: 40%;
-    font-family: Inconsolata;
-    font-weight: bold;
-    text-shadow: 0px 2px 0px rgb(210, 210, 210);
-    margin-bottom: 0px;
+.pos .scale-screen .computed-price.weight-value-editable {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.pos .scale-screen .weight-value-fixed {
-    border-radius: 3px;
-    box-shadow: 0px 2px 0px rgb(225, 225, 225) inset;
-    text-align: right;
-    background: white;
-}
-
-.pos .scale-screen .weight-value-alterable {
-    text-align: left;
-    padding-bottom: 0px;
-    padding-left: 0px;
-}
-.pos .scale-screen .input-weight {
-    border: 1px solid #cecbcb;
-    border-radius: 20px;
-    padding: 15px 20px;
+.pos .scale-screen .computed-price.input-weight {
+    border: 1px solid #e0e2e6;
     width: 50%;
-    font-family: Inconsolata;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.pos .scale-screen .input-weight:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 3px #6ec89b;
+    float: none;
+    margin: 6px 0;
+    color: $gray-700;
+    text-shadow: 0 0;
+    padding: 10px;
 }
 
 .pos .scale-screen .input-weight.invalid-input {
-    background-color: #f66;
+    /* same as .popup.popup-error */
+    background-color: #f3bbbb;
+    color: rgb(168, 89, 89);
+
+    box-shadow: none;
+    /* same as .popup.popup-error .title */
+    border-color: rgba(255, 76, 76, 0.5);
 }
