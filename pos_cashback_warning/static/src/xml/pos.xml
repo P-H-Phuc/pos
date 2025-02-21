@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
     Copyright 2022 - Today Sylvain LE GAL (https://twitter.com/legalsylvain)
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
@@ -8,8 +8,10 @@
     <t t-extend="PaymentScreen-Paymentlines">
         <t t-jquery=".paymentline.extra" t-operation="append">
             <td colspan="4" t-if="widget.extradue_cashback > 0">
-                <i class='fa fa-warning'></i>
-                This will generate a cashback of <t t-esc='widget.format_currency_no_symbol(widget.extradue_cashback)'/>
+                <i class='fa fa-warning' />
+                This will generate a cashback of <t
+                    t-esc='widget.format_currency_no_symbol(widget.extradue_cashback)'
+                />
             </td>
         </t>
     </t>
