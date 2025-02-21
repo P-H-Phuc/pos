@@ -1,6 +1,6 @@
-================================
-Point of Sale - Cashback Warning
-================================
+========================
+Point of Sale - Cashback
+========================
 
 .. 
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -17,10 +17,10 @@ Point of Sale - Cashback Warning
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github
-    :target: https://github.com/OCA/pos/tree/16.0/pos_cashback_warning
+    :target: https://github.com/OCA/pos/tree/16.0/pos_cashback
     :alt: OCA/pos
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/pos-16-0/pos-16-0-pos_cashback_warning
+    :target: https://translation.odoo-community.org/projects/pos-16-0/pos-16-0-pos_cashback
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
     :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=16.0
@@ -28,8 +28,11 @@ Point of Sale - Cashback Warning
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This modules extends the Point of sale functionnalies to add a warning
-if confirming an order generate a cashback.
+This modules extends the Point of sale to manage cashback.
+
+**Note** : The cashback is an operation that consists,
+for a merchant to collect more money in check, credit card, etc.
+than the amount of the sale and give change in cash.
 
 By default, if the payment lines of an Odoo PoS order generate Change,
 the journal for the change will be the Cash journal.
@@ -39,17 +42,17 @@ transaction will generate a cashback.
 
 This module simply add a message in such case.
 
-.. image:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_cashback_warning/static/description/pos_cashback_warning.png
-
-
-**Note** : The cashback is an operation that consists,
-for a merchant to collect more money in check, credit card, etc.
-than the amount of the sale and give change in cash.
+.. image:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_cashback/static/description/pos_cashback_warning.png
 
 **Table of contents**
 
 .. contents::
    :local:
+
+Known issues / Roadmap
+======================
+
+* implement charging commission, for the cashback service.
 
 Bug Tracker
 ===========
@@ -57,7 +60,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/pos/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_cashback_warning%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_cashback%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -95,6 +98,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-legalsylvain| 
 
-This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/16.0/pos_cashback_warning>`_ project on GitHub.
+This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/16.0/pos_cashback>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
