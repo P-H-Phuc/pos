@@ -88,7 +88,7 @@ Contributors
 
 - Sylvain LE GAL (https://www.twitter.com/legalsylvain)
 - Le Nid
-- CoopITEasy
+- `Coop IT Easy SC <https://coopiteasy.be>`_
 
 Maintainers
 ~~~~~~~~~~~
