@@ -3,6 +3,7 @@
 import {onMounted, useState} from "@odoo/owl";
 import {Component} from "point_of_sale.Registries";
 import ScaleScreen from "point_of_sale.ScaleScreen";
+import {convert_mass} from "../../tools.esm";
 import {useBarcodeReader} from "point_of_sale.custom_hooks";
 
 const TareScaleScreen = (ScaleScreen_) =>
@@ -54,16 +55,33 @@ const TareScaleScreen = (ScaleScreen_) =>
         async _setWeight() {
             await super._setWeight();
             this.state.gross_weight = this.state.weight;
-            this.state.weight -= this.state.tare;
+            this.updateWeight();
         }
 
         updateWeight() {
             this.state.gross_weight_input_valid = !isNaN(this.state.gross_weight);
             this.state.tare_input_valid = !isNaN(this.state.tare);
-            this.state.weight = this.state.gross_weight - this.state.tare;
+            if (!this.state.gross_weight_input_valid || !this.state.tare_input_valid) {
+                // This is to ensure that the resulting weight is invalid.
+                // Without this, if the tare uom and the product uom are
+                // different, convert_mass() returns 0, which results in a
+                // valid weight, while it should not.
+                this.state.weight = NaN;
+                return;
+            }
+            const tare_uom_id = this.env.pos.config.iface_tare_uom_id[0];
+            const tare_uom = this.env.pos.units_by_id[tare_uom_id];
+            const tare_in_product_uom = convert_mass(
+                this.state.tare,
+                tare_uom,
+                this.gross_uom
+            );
+            this.state.weight = this.state.gross_weight - tare_in_product_uom;
         }
 
         confirm() {
+            // Override the parent method to define the weight as an object
+            // containing the tare.
             this.props.resolve({
                 confirmed: true,
                 payload: {
