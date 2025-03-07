@@ -20,19 +20,11 @@ export function convert_mass(mass, from_unit, to_unit) {
     if (from_unit.id === to_unit.id) {
         return mass;
     }
-    // Converts "from_unit" to reference unit of measure.
+    // Convert from "from_unit" to reference unit of measure.
     let result = mass;
-    if (from_unit.uom_type === "bigger") {
-        result /= from_unit.factor;
-    } else {
-        result *= from_unit.factor_inv;
-    }
-    // Converts reference unit of measure to "to_unit".
-    if (to_unit.uom_type === "bigger") {
-        result *= to_unit.factor;
-    } else {
-        result /= to_unit.factor_inv;
-    }
+    result /= from_unit.factor;
+    // Convert from reference unit of measure to "to_unit".
+    result *= to_unit.factor;
 
     if (to_unit.rounding) {
         // Return the rounded result if needed.
