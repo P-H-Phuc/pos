@@ -22,13 +22,15 @@ const TareScaleScreen = (ScaleScreen_) =>
                 useBarcodeReader({
                     tare: this._barcodeTareAction,
                 });
+                // Don't focus fields if the tare can be input with a barcode
+                // reader, as scanning the barcode would result in its value
+                // being input in the field (as barcode readers are seen as
+                // keyboards).
+                return;
             }
             let selector = "#input_weight_tare";
             if (this.env.pos.config.iface_gross_weight_method === "manual") {
                 selector = "#input_gross_weight";
-            } else if (this.env.pos.config.iface_tare_method === "barcode") {
-                // No fields to focus.
-                return;
             }
             onMounted(() => {
                 const target = this.el.querySelectorAll(selector)[0];
