@@ -59,7 +59,7 @@ msgstr ""
 #. module: pos_tare
 #: model_terms:ir.ui.view,arch_db:pos_tare.view_pos_config_form
 msgid "Configure how to input Gross Weight."
-msgstr "Configurer comment saisir le poid brut."
+msgstr "Configurer comment saisir le poids brut."
 
 #. module: pos_tare
 #: model_terms:ir.ui.view,arch_db:pos_tare.view_pos_config_form
@@ -90,34 +90,34 @@ msgstr "Fonctionnalité désactivée"
 #: code:addons/pos_tare/static/src/xml/pos_tare.xml:7
 #, python-format
 msgid "Gross Weight"
-msgstr "Poid brut"
+msgstr "Poids brut"
 
 #. module: pos_tare
 #. openerp-web
 #: code:addons/pos_tare/static/src/xml/pos_tare.xml:48
 #, python-format
 msgid "Gross Weight :"
-msgstr "Poid brut :"
+msgstr "Poids brut :"
 
 #. module: pos_tare
 #: model:ir.model.fields,field_description:pos_tare.field_pos_config__iface_gross_weight_method
 #: model_terms:ir.ui.view,arch_db:pos_tare.view_pos_config_form
 msgid "Gross Weight Input Method"
-msgstr "Méthode de saisie du poid brut"
+msgstr "Méthode de saisie du poids brut"
 
 #. module: pos_tare
 #. openerp-web
 #: code:addons/pos_tare/static/src/xml/pos_tare.xml:34
 #, python-format
 msgid "Gross Weight:"
-msgstr "Poid brut :"
+msgstr "Poids brut :"
 
 #. module: pos_tare
 #. openerp-web
 #: code:addons/pos_tare/static/src/js/screens.js:91
 #, python-format
 msgid "Incorrect Gross Weight Value"
-msgstr "Poid brut incorrecte"
+msgstr "Poids brut incorrecte"
 
 #. module: pos_tare
 #. openerp-web
@@ -129,12 +129,12 @@ msgstr "Tare incorrecte"
 #. module: pos_tare
 #: selection:pos.config,iface_gross_weight_method:0
 msgid "Input Gross Weight via Scale"
-msgstr "Saisir le poid brut via la balance"
+msgstr "Saisir le poids brut via la balance"
 
 #. module: pos_tare
 #: selection:pos.config,iface_gross_weight_method:0
 msgid "Input the Gross Weight manually"
-msgstr "Saisir le poid brut manuellement"
+msgstr "Saisir le poids brut manuellement"
 
 #. module: pos_tare
 #: selection:pos.config,iface_tare_method:0
@@ -171,7 +171,7 @@ msgstr "Colis"
 #: code:addons/pos_tare/static/src/js/screens.js:92
 #, python-format
 msgid "Please set a numeric value in the gross weight field."
-msgstr "Veuillez saisir une valeur numérique pour le poid brut"
+msgstr "Veuillez saisir une valeur numérique pour le poids brut"
 
 #. module: pos_tare
 #. openerp-web
@@ -286,7 +286,7 @@ msgstr "UdM de la tare"
 #: model:ir.model.fields,field_description:pos_tare.field_product_product__tare_weight
 #: model:ir.model.fields,field_description:pos_tare.field_product_template__tare_weight
 msgid "Tare Weight"
-msgstr "Poid de la tare"
+msgstr "Poids de la tare"
 
 #. module: pos_tare
 #. openerp-web
@@ -337,7 +337,7 @@ msgstr "Impossible d'appliquer cette tare."
 #: code:addons/pos_tare/static/src/js/tools.js:17
 #, python-format
 msgid "We can not cast a weight in %s into %s."
-msgstr "Impossible de convertir le poid de %s à %s."
+msgstr "Impossible de convertir le poids de %s à %s."
 
 #. module: pos_tare
 #: selection:barcode.rule,type:0
