@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-pos_access_right>=16.0dev,<16.1dev',
+        'odoo-addon-pos_auto_invoice>=16.0dev,<16.1dev',
         'odoo-addon-pos_bypass_global_discount>=16.0dev,<16.1dev',
         'odoo-addon-pos_cash_control_override>=16.0dev,<16.1dev',
         'odoo-addon-pos_config_logo>=16.0dev,<16.1dev',
