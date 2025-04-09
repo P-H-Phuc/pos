@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[pos_barcode_rule_priced_with_change_rate](pos_barcode_rule_priced_with_change_rate/) | 18.0.1.0.0 |  | Add a barcode rule to be able to scan a barcode with price encoded (as the standard "Priced Product" rule), and convert the price according to a given change rate.
 [pos_divide_order_summary](pos_divide_order_summary/) | 18.0.1.0.0 | [![henrybackman](https://github.com/henrybackman.png?size=30px)](https://github.com/henrybackman) | POS - Divider order summary
 
 [//]: # (end addons)

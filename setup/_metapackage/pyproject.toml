@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-oca-pos"
-version = "18.0.20250409.0"
+version = "18.0.20250409.1"
 dependencies = [
+    "odoo-addon-pos_barcode_rule_priced_with_change_rate==18.0.*",
     "odoo-addon-pos_divide_order_summary==18.0.*",
 ]
 classifiers=[
