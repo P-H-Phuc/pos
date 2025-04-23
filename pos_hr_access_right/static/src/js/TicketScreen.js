@@ -18,7 +18,7 @@ odoo.define("pos_hr_access_right.TicketScreen", function (require) {
                     !this.env.pos.cashier.hasGroupDeleteOrder
                 )
                     return;
-                return super._onDeleteOrder(order);
+                return super._onDeleteOrder({detail: order});
             }
         };
 
