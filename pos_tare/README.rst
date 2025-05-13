@@ -28,19 +28,16 @@ Point Of Sale - Tare
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Give the possibility to the user to enter a Tare weight, when weighing
-products in the Point of Sale.
-This will compute automatically net weight and set it to the current
-selected order
+Allow to enter a tare weight when weighing products in the Point of Sale.
+This will compute the net weight automatically and set it on the currently selected order line.
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/pos_tare.png
 
-The net weight is displayed in the order with the tare value below.
+The net weight is displayed in the order with the tare value below it.
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/order.png
 
-
-All informations will be available on the receipt.
+This information is also displayed on the receipt.
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/pos_ticket.png
 
@@ -52,15 +49,26 @@ All informations will be available on the receipt.
 Usage
 =====
 
-Install this add-on and configure your point of sale. To enable this addon, go to your point of sale configuration page. There, enable the electronic scale and barcode reader in the "IoT Box" section. In the same page, look up for the "Tare input method" field, and choose a tare method. There are three tare methods:
+Install this module and configure the point of sale.
+To enable this addon, go to the point of sale configuration page.
+There, enable the electronic scale and barcode reader in the "IoT Box" section.
+In the same page, look for the "Tare Input Method" field, and choose a tare method.
+There are three tare methods:
 
-- "manual": you'll set the tare value when you weight the product;
-- "barcode": you'll scan the tare value from a barcode;
-- "both": you can both of the above.
+- "Manual": allows to enter the tare value when a product is weighed
+- "Barcode": allows to scan a barcode containing the tare value
+- "Both": allows both of the above methods
 
-To generate a tare barcode you need to use the default barcode nomenclature. The default barcode pattern is `0700000{NNDDD}`. Using that pattern, the barcode for a tare of 0.1kg is `0700000001006`. The `pos_tare_barcode_generator` allows you to create tare labels right from the POS.
+.. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/pos_config.png
 
-you can define a default tare on the product form view, if you always use the same type of packaging (or container) for a given product.
+To handle tare barcodes you need to use the `default barcode nomenclature <https://www.odoo.com/documentation/16.0/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.html>`__.
+The default tare barcode rule is an EAN-13 barcode of the form ``0700000{NNDDD}`` (where ``N`` will encode the kilograms units and ``D`` the decimals).
+Using that pattern, the barcode for a tare of 1.234 kg is ``0700000012347`` (the last digit is the EAN-13 check digit).
+This barcode rule can be modified if needed, and other ones added.
+
+The ``pos_self_service_weighing_tare`` module allows to weigh containers and create tare barcode labels from a PoS configured as a self-service weighing station.
+
+You can define a default tare on the product form view, if you always use the same type of packaging (or container) for a given product.
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/product_template.png
 
