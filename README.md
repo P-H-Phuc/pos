@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[pos_cashier_login](pos_cashier_login/) | 11.0.0.1.2 | [![kirca](https://github.com/kirca.png?size=30px)](https://github.com/kirca) | Require for cashier to sign in before each sale
+[pos_cashier_login](pos_cashier_login/) | 11.0.0.1.2 | <a href='https://github.com/kirca'><img src='https://github.com/kirca.png' width='32' height='32' style='border-radius:50%;' alt='kirca'/></a> | Require for cashier to sign in before each sale
 [pos_config_show_accounting](pos_config_show_accounting/) | 11.0.1.0.0 |  | Always display accounting settings in POS Config
 [pos_default_payment_method](pos_default_payment_method/) | 11.0.1.0.1 |  | POS Default payment method
 [pos_fix_search_limit](pos_fix_search_limit/) | 11.0.1.0.1 |  | Increase search in the PoS
@@ -30,9 +30,9 @@ addon | version | maintainers | summary
 [pos_margin](pos_margin/) | 11.0.1.0.1 |  | Margin on PoS Order
 [pos_order_mgmt](pos_order_mgmt/) | 11.0.1.0.4 |  | Manage old POS Orders from the frontend
 [pos_order_return](pos_order_return/) | 11.0.1.0.1 |  | Point of Sale Order Return
-[pos_payment_change](pos_payment_change/) | 11.0.1.0.0 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Allow cashier to change order payments, as long as the session is not closed.
+[pos_payment_change](pos_payment_change/) | 11.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Allow cashier to change order payments, as long as the session is not closed.
 [pos_payment_entries_globalization](pos_payment_entries_globalization/) | 11.0.1.0.1 |  | Globalize POS Payment
-[pos_picking_delayed](pos_picking_delayed/) | 11.0.1.0.1 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) [![chienandalu](https://github.com/chienandalu.png?size=30px)](https://github.com/chienandalu) | Delay the creation of the picking when PoS order is created
+[pos_picking_delayed](pos_picking_delayed/) | 11.0.1.0.1 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> <a href='https://github.com/chienandalu'><img src='https://github.com/chienandalu.png' width='32' height='32' style='border-radius:50%;' alt='chienandalu'/></a> | Delay the creation of the picking when PoS order is created
 [pos_price_to_weight](pos_price_to_weight/) | 11.0.1.0.1 |  | Compute weight based on barcodes with prices
 [pos_session_pay_invoice](pos_session_pay_invoice/) | 11.0.1.0.1 |  | Pay and receive invoices from PoS Session
 [pos_stock_picking_invoice_link](pos_stock_picking_invoice_link/) | 11.0.1.0.0 |  | POS Stock Picking Invoice Link
