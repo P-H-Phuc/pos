@@ -22,55 +22,55 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [pos_access_right](pos_access_right/) | 14.0.1.0.2 |  | Point of Sale - Extra Access Right for certain actions
-[pos_backend_communication](pos_backend_communication/) | 14.0.1.0.1 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Communicate with odoo's backend from POS.
+[pos_backend_communication](pos_backend_communication/) | 14.0.1.0.1 | <a href='https://github.com/hparfr'><img src='https://github.com/hparfr.png' width='32' height='32' style='border-radius:50%;' alt='hparfr'/></a> | Communicate with odoo's backend from POS.
 [pos_cash_move_reason](pos_cash_move_reason/) | 14.0.1.1.2 |  | POS cash in-out reason
 [pos_config_logo](pos_config_logo/) | 14.0.1.0.0 |  | Set logotypes different from the company's one
 [pos_customer_display](pos_customer_display/) | 14.0.1.1.0 |  | Manage LED Customer Display device from POS front end
 [pos_customer_required](pos_customer_required/) | 14.0.1.0.0 |  | Point of Sale Require Customer
-[pos_customer_tree_view_vat](pos_customer_tree_view_vat/) | 14.0.1.0.1 | [![mileo](https://github.com/mileo.png?size=30px)](https://github.com/mileo) | Point of Sale: Show VAT number at Customer Tree View
+[pos_customer_tree_view_vat](pos_customer_tree_view_vat/) | 14.0.1.0.1 | <a href='https://github.com/mileo'><img src='https://github.com/mileo.png' width='32' height='32' style='border-radius:50%;' alt='mileo'/></a> | Point of Sale: Show VAT number at Customer Tree View
 [pos_default_partner](pos_default_partner/) | 14.0.1.0.0 |  | Add a default customer in pos order
-[pos_disable_pricelist_selection](pos_disable_pricelist_selection/) | 14.0.2.0.1 | [![ilyasprogrammer](https://github.com/ilyasprogrammer.png?size=30px)](https://github.com/ilyasprogrammer) | Disable Pricelist selection button in POS
+[pos_disable_pricelist_selection](pos_disable_pricelist_selection/) | 14.0.2.0.1 | <a href='https://github.com/ilyasprogrammer'><img src='https://github.com/ilyasprogrammer.png' width='32' height='32' style='border-radius:50%;' alt='ilyasprogrammer'/></a> | Disable Pricelist selection button in POS
 [pos_edit_order_line](pos_edit_order_line/) | 14.0.1.0.2 |  | POS Edit Order Line
 [pos_empty_home](pos_empty_home/) | 14.0.1.0.0 |  | Point of Sale - Hide products if no category is selected
 [pos_escpos_status](pos_escpos_status/) | 14.0.1.0.0 |  | Point of sale: fetch status for 'escpos' driver
-[pos_fixed_discount](pos_fixed_discount/) | 14.0.1.0.3 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Allow to apply discounts with fixed amount
+[pos_fixed_discount](pos_fixed_discount/) | 14.0.1.0.3 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Allow to apply discounts with fixed amount
 [pos_global_discount_in_line](pos_global_discount_in_line/) | 14.0.1.0.0 |  | Order discount in line instead of discount product
 [pos_hide_banknote_button](pos_hide_banknote_button/) | 14.0.1.0.1 |  | Hide useless Banknote buttons in the PoS (+10, +20, +50)
-[pos_margin](pos_margin/) | 14.0.1.0.4 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Margin on PoS Order
-[pos_no_cash_bank_statement](pos_no_cash_bank_statement/) | 14.0.1.1.0 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Generate bank statements for all payment methods, not only cash
+[pos_margin](pos_margin/) | 14.0.1.0.4 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Margin on PoS Order
+[pos_no_cash_bank_statement](pos_no_cash_bank_statement/) | 14.0.1.1.0 | <a href='https://github.com/alexis-via'><img src='https://github.com/alexis-via.png' width='32' height='32' style='border-radius:50%;' alt='alexis-via'/></a> | Generate bank statements for all payment methods, not only cash
 [pos_order_mgmt](pos_order_mgmt/) | 14.0.1.0.2 |  | Manage old POS Orders from the frontend
 [pos_order_product_search](pos_order_product_search/) | 14.0.1.0.0 |  | Search for orders by product fields
-[pos_order_remove_line](pos_order_remove_line/) | 14.0.1.0.0 | [![robyf70](https://github.com/robyf70.png?size=30px)](https://github.com/robyf70) | Add button to remove POS order line.
+[pos_order_remove_line](pos_order_remove_line/) | 14.0.1.0.0 | <a href='https://github.com/robyf70'><img src='https://github.com/robyf70.png' width='32' height='32' style='border-radius:50%;' alt='robyf70'/></a> | Add button to remove POS order line.
 [pos_order_return](pos_order_return/) | 14.0.1.0.4 |  | Point of Sale Order Return
-[pos_order_to_sale_order](pos_order_to_sale_order/) | 14.0.1.0.0 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | PoS Order To Sale Order
-[pos_partner_birthdate](pos_partner_birthdate/) | 14.0.1.0.2 | [![ecino](https://github.com/ecino.png?size=30px)](https://github.com/ecino) | Adds the birthdate in the customer screen of POS
-[pos_partner_firstname](pos_partner_firstname/) | 14.0.1.0.1 | [![robyf70](https://github.com/robyf70.png?size=30px)](https://github.com/robyf70) | POS Support of partner firstname
-[pos_payment_change](pos_payment_change/) | 14.0.1.0.3 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Allow cashier to change order payments, as long as the session is not closed.
+[pos_order_to_sale_order](pos_order_to_sale_order/) | 14.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | PoS Order To Sale Order
+[pos_partner_birthdate](pos_partner_birthdate/) | 14.0.1.0.2 | <a href='https://github.com/ecino'><img src='https://github.com/ecino.png' width='32' height='32' style='border-radius:50%;' alt='ecino'/></a> | Adds the birthdate in the customer screen of POS
+[pos_partner_firstname](pos_partner_firstname/) | 14.0.1.0.1 | <a href='https://github.com/robyf70'><img src='https://github.com/robyf70.png' width='32' height='32' style='border-radius:50%;' alt='robyf70'/></a> | POS Support of partner firstname
+[pos_payment_change](pos_payment_change/) | 14.0.1.0.3 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Allow cashier to change order payments, as long as the session is not closed.
 [pos_payment_method_cashdro](pos_payment_method_cashdro/) | 14.0.1.0.1 |  | Allows to pay with CashDro Terminals on the Point of Sale
 [pos_payment_terminal](pos_payment_terminal/) | 14.0.2.1.0 |  | Point of sale: support generic payment terminal
-[pos_picking_delayed](pos_picking_delayed/) | 14.0.1.0.0 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Delay the creation of the picking when PoS order is created
-[pos_pricelist_show_discount](pos_pricelist_show_discount/) | 14.0.1.0.5 | [![aleuffre](https://github.com/aleuffre.png?size=30px)](https://github.com/aleuffre) [![renda-dev](https://github.com/renda-dev.png?size=30px)](https://github.com/renda-dev) | PoS: show appropriate discount when discounting from pricelist
+[pos_picking_delayed](pos_picking_delayed/) | 14.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Delay the creation of the picking when PoS order is created
+[pos_pricelist_show_discount](pos_pricelist_show_discount/) | 14.0.1.0.5 | <a href='https://github.com/aleuffre'><img src='https://github.com/aleuffre.png' width='32' height='32' style='border-radius:50%;' alt='aleuffre'/></a> <a href='https://github.com/renda-dev'><img src='https://github.com/renda-dev.png' width='32' height='32' style='border-radius:50%;' alt='renda-dev'/></a> | PoS: show appropriate discount when discounting from pricelist
 [pos_product_display_default_code](pos_product_display_default_code/) | 14.0.1.0.1 |  | pos: display product default code before product name
 [pos_product_multi_barcode](pos_product_multi_barcode/) | 14.0.1.0.2 |  | Make product multi barcodes usable in the point of sale
 [pos_product_sort](pos_product_sort/) | 14.0.1.0.0 |  | sort the products by name in the point of sale instead of sorting them by the sequence field.
 [pos_product_template](pos_product_template/) | 14.0.1.0.3 |  | Manage Product Template in Front End Point Of Sale
-[pos_product_template_configurator](pos_product_template_configurator/) | 14.0.1.0.0 | [![GabbasovDinar](https://github.com/GabbasovDinar.png?size=30px)](https://github.com/GabbasovDinar) [![isserver1](https://github.com/isserver1.png?size=30px)](https://github.com/isserver1) | Manage Product Template in Front End Point Of Sale via Configurator
+[pos_product_template_configurator](pos_product_template_configurator/) | 14.0.1.0.0 | <a href='https://github.com/GabbasovDinar'><img src='https://github.com/GabbasovDinar.png' width='32' height='32' style='border-radius:50%;' alt='GabbasovDinar'/></a> <a href='https://github.com/isserver1'><img src='https://github.com/isserver1.png' width='32' height='32' style='border-radius:50%;' alt='isserver1'/></a> | Manage Product Template in Front End Point Of Sale via Configurator
 [pos_receipt_hide_price](pos_receipt_hide_price/) | 14.0.1.0.1 |  | Add button to remove price from receipt.
-[pos_report_discount](pos_report_discount/) | 14.0.1.0.0 | [![dessanhemrayev](https://github.com/dessanhemrayev.png?size=30px)](https://github.com/dessanhemrayev) [![CetmixGitDrone](https://github.com/CetmixGitDrone.png?size=30px)](https://github.com/CetmixGitDrone) | POS Report Discount
+[pos_report_discount](pos_report_discount/) | 14.0.1.0.0 | <a href='https://github.com/dessanhemrayev'><img src='https://github.com/dessanhemrayev.png' width='32' height='32' style='border-radius:50%;' alt='dessanhemrayev'/></a> <a href='https://github.com/CetmixGitDrone'><img src='https://github.com/CetmixGitDrone.png' width='32' height='32' style='border-radius:50%;' alt='CetmixGitDrone'/></a> | POS Report Discount
 [pos_report_session_summary](pos_report_session_summary/) | 14.0.1.0.3 |  | Adds a Session Summary PDF report on the POS session
 [pos_require_product_quantity](pos_require_product_quantity/) | 14.0.1.0.0 |  | A popup is shown if product quantity is set to 0 for one or more order lines when clicking on "Payment" button.
-[pos_reset_search](pos_reset_search/) | 14.0.1.0.1 | [![fkawala](https://github.com/fkawala.png?size=30px)](https://github.com/fkawala) | Point of Sale - Clear product search when user clicks on a product.
+[pos_reset_search](pos_reset_search/) | 14.0.1.0.1 | <a href='https://github.com/fkawala'><img src='https://github.com/fkawala.png' width='32' height='32' style='border-radius:50%;' alt='fkawala'/></a> | Point of Sale - Clear product search when user clicks on a product.
 [pos_return_voucher](pos_return_voucher/) | 14.0.1.0.0 |  | Point of Sale - Manage return vouchers
 [pos_reuse_pricelist](pos_reuse_pricelist/) | 14.0.1.0.1 |  | PoS reuse pricelist
 [pos_sale_order_load](pos_sale_order_load/) | 14.0.1.0.4 |  | Point of sale: Import a sales order in an active session of POS
 [pos_session_pay_invoice](pos_session_pay_invoice/) | 14.0.1.1.0 |  | Pay and receive invoices from PoS Session
-[pos_show_clock](pos_show_clock/) | 14.0.1.0.0 | [![mileo](https://github.com/mileo.png?size=30px)](https://github.com/mileo) [![ygcarvalh](https://github.com/ygcarvalh.png?size=30px)](https://github.com/ygcarvalh) [![felipezago](https://github.com/felipezago.png?size=30px)](https://github.com/felipezago) | Point of Sale: Display Current Date and Time on POS sreen
+[pos_show_clock](pos_show_clock/) | 14.0.1.0.0 | <a href='https://github.com/mileo'><img src='https://github.com/mileo.png' width='32' height='32' style='border-radius:50%;' alt='mileo'/></a> <a href='https://github.com/ygcarvalh'><img src='https://github.com/ygcarvalh.png' width='32' height='32' style='border-radius:50%;' alt='ygcarvalh'/></a> <a href='https://github.com/felipezago'><img src='https://github.com/felipezago.png' width='32' height='32' style='border-radius:50%;' alt='felipezago'/></a> | Point of Sale: Display Current Date and Time on POS sreen
 [pos_show_config_name](pos_show_config_name/) | 14.0.1.0.0 |  | Point of sale: show pos config name
-[pos_supplierinfo_barcode](pos_supplierinfo_barcode/) | 14.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Search products by supplier barcode
-[pos_supplierinfo_search](pos_supplierinfo_search/) | 14.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Search products by supplier data
+[pos_supplierinfo_barcode](pos_supplierinfo_barcode/) | 14.0.1.0.0 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Search products by supplier barcode
+[pos_supplierinfo_search](pos_supplierinfo_search/) | 14.0.1.0.0 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Search products by supplier data
 [pos_ticket_without_price](pos_ticket_without_price/) | 14.0.1.0.0 |  | Adds receipt ticket without price or taxes
 [pos_timeout](pos_timeout/) | 14.0.1.0.0 |  | Set the timeout of the point of sale
-[pos_user_restriction](pos_user_restriction/) | 14.0.1.0.0 | [![eLBati](https://github.com/eLBati.png?size=30px)](https://github.com/eLBati) | Restrict some users to see and use only certain points of sale
+[pos_user_restriction](pos_user_restriction/) | 14.0.1.0.0 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Restrict some users to see and use only certain points of sale
 [pos_warning_exiting](pos_warning_exiting/) | 14.0.1.0.0 |  | Add warning at exiting the PoS front office UI if there are pending draft orders
 
 [//]: # (end addons)
