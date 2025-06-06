@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [pos_cash_control_extension](pos_cash_control_extension/) | 17.0.1.0.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | This module extends the cash in/out control
 [pos_cash_move_reason](pos_cash_move_reason/) | 17.0.1.0.0 |  | POS cash in-out reason
+[pos_category_vertical_display](pos_category_vertical_display/) | 17.0.1.0.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | POS Category Vertical Display
 [pos_config_phone](pos_config_phone/) | 17.0.1.0.0 | <a href='https://github.com/peluko00'><img src='https://github.com/peluko00.png' width='32' height='32' style='border-radius:50%;' alt='peluko00'/></a> | Display phone of POS in ticket
 [pos_hide_cost_price_and_margin](pos_hide_cost_price_and_margin/) | 17.0.1.0.0 |  | Hide Cost and Margin on PoS
 [pos_lot_barcode](pos_lot_barcode/) | 17.0.1.0.2 |  | Scan barcode to enter lot/serial numbers
