@@ -10,5 +10,5 @@ class PosConfig(models.Model):
     iface_empty_home = fields.Boolean(
         string="Empty Home",
         help="Hide products if no category is selected.",
-        default=True,
+        default=False,
     )

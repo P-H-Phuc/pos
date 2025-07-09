@@ -5,14 +5,21 @@
 
 {
     "name": "Point of Sale - Empty Home",
-    "version": "14.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Point Of Sale",
     "summary": "Point of Sale - Hide products if no category is selected",
     "author": "La Louve, GRAP, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/pos",
     "license": "AGPL-3",
     "depends": ["point_of_sale"],
-    "data": ["views/assets.xml", "views/pos_config.xml"],
-    "qweb": ["static/src/xml/pos_empty_home.xml"],
-    "demo": ["demo/pos_empty_home.xml"],
+    "data": ["views/pos_config_view.xml"],
+    "assets": {
+        "point_of_sale._assets_pos": [
+            "pos_empty_home/static/src/js/product_screen.esm.js",
+            "pos_empty_home/static/src/xml/product_screen.xml",
+        ],
+    },
+    "demo": [
+        "demo/pos_empty_home_demo.xml",
+    ],
 }
