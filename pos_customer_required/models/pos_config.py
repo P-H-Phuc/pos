@@ -10,7 +10,7 @@ class PosConfig(models.Model):
     _inherit = "pos.config"
 
     require_customer = fields.Selection(
-        [
+        selection=[
             ("no", "Optional"),
             ("payment", "Required before paying"),
             ("order", "Required before starting the order"),

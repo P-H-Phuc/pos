@@ -120,6 +120,9 @@ Contributors
 - Druidoo <`https://www.druidoo.io\\> <https://www.druidoo.io\>>`__
 - Eric Antones <eantones@nuobit.com>
 - Kilian Niubo <kniubo@nuobit.com>
+- `Trobz <https://www.trobz.com>`__
+
+  - Phan Hong Phuc <phucph@trobz.com>
 
 Maintainers
 -----------
