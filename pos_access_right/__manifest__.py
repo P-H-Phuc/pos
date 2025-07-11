@@ -4,7 +4,7 @@
 
 {
     "name": "Point of Sale - Extra Access Right",
-    "version": "16.0.1.0.2",
+    "version": "18.0.1.0.0",
     "category": "Point Of Sale",
     "summary": "Point of Sale - Extra Access Right for certain actions",
     "author": "La Louve, GRAP, Odoo Community Association (OCA)",
@@ -16,14 +16,13 @@
         "security/res_groups.xml",
     ],
     "assets": {
-        "point_of_sale.assets": [
-            "pos_access_right/static/src/css/*",
-            "pos_access_right/static/src/js/*.js",
-            "pos_access_right/static/src/xml/*.xml",
+        "point_of_sale._assets_pos": [
+            "pos_access_right/static/src/js/product_screen.esm.js",
+            "pos_access_right/static/src/js/action_pad.esm.js",
+            "pos_access_right/static/src/js/order_tabs.esm.js",
+            "pos_access_right/static/src/js/ticket_screen.esm.js",
+            "pos_access_right/static/src/xml/action_pad.xml",
         ]
     },
-    "qweb": [
-        "static/src/xml/*.xml",
-    ],
     "installable": True,
 }

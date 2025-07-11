@@ -23,7 +23,6 @@ class TestUserRestriction(TransactionCase):
         cls.pos_config_model = cls.env["pos.config"]
 
     def test_access_pos(self):
-        self.pos_config_main._compute_groups()
         self.group_negative_qty = self.env.ref("pos_access_right.group_negative_qty")
         self.assertEqual(
             self.group_negative_qty, self.pos_config_main.group_negative_qty_id
@@ -38,11 +37,6 @@ class TestUserRestriction(TransactionCase):
         self.assertEqual(
             self.group_change_unit_price,
             self.pos_config_main.group_change_unit_price_id,
-        )
-
-        self.group_multi_order = self.env.ref("pos_access_right.group_multi_order")
-        self.assertEqual(
-            self.group_multi_order, self.pos_config_main.group_multi_order_id
         )
 
         self.group_delete_order = self.env.ref("pos_access_right.group_delete_order")

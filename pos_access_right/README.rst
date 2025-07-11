@@ -85,6 +85,9 @@ Contributors
 - Ammmar Officewala
   <`https://twitter.com/AmmarOfficewala\\> <https://twitter.com/AmmarOfficewala\>>`__
 - Helly kapatel <helly.kapatel@initos.com>
+- `Trobz <https://trobz.com>`__
+
+  - Phan Hong Phuc <phucph@trobz.com>
 
 Maintainers
 -----------

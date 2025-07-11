@@ -4,18 +4,23 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-10-21 18:32+0000\n"
-"Last-Translator: Osoul <baruni@osoul.ly>\n"
-"Language-Team: none\n"
-"Language: ar\n"
+"POT-Creation-Date: 2026-01-28 10:31+0000\n"
+"PO-Revision-Date: 2026-01-28 10:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.8\n"
+"Plural-Forms: \n"
+
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/order_tabs.esm.js:0
+#: code:addons/pos_access_right/static/src/js/product_screen.esm.js:0
+msgid "Not Allowed"
+msgstr "غير مسموح"
 
 #. module: pos_access_right
 #: model:ir.model.fields,field_description:pos_access_right.field_pos_config__group_discount_id
@@ -68,12 +73,7 @@ msgstr "نقاط البيع - تغيير سعر البيع"
 #. module: pos_access_right
 #: model:ir.model,name:pos_access_right.model_pos_config
 msgid "Point of Sale Configuration"
-msgstr "إعدادات نقاط البيع"
-
-#. module: pos_access_right
-#: model:ir.model,name:pos_access_right.model_pos_session
-msgid "Point of Sale Session"
-msgstr ""
+msgstr "تهيئة نقطة البيع "
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_discount_id
@@ -81,6 +81,7 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Allow Discount' Group to "
 "the Point of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – السماح بالخصم إلى واجهة نقطة البيع الأمامية."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_negative_qty_id
@@ -88,6 +89,7 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Allow Negative Quantity' "
 "Group to the Point of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – السماح بالكمية السالبة إلى واجهة نقطة البيع الأمامية."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_change_unit_price_id
@@ -95,6 +97,7 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Allow Unit Price Change' "
 "Group to the Point of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – السماح بتغيير سعر الوحدة إلى واجهة نقطة البيع الأمامية."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_delete_order_id
@@ -102,6 +105,7 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Delete Order' Group to the "
 "Point of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – حذف الطلب إلى واجهة نقطة البيع الأمامية."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_multi_order_id
@@ -109,38 +113,29 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Many Orders Group to the "
 "Point of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – الطلبات المتعددة إلى واجهة نقطة البيع الأمامية."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_payment_id
 msgid ""
-"This field is there to pass the id of the 'PoS - Payment' Group to the Point "
-"of Sale Frontend."
+"This field is there to pass the id of the 'PoS - Payment' Group to the Point"
+" of Sale Frontend."
 msgstr ""
+"يُستخدم هذا الحقل لتمرير مُعرّف مجموعة PoS – الدفع إلى واجهة نقطة البيع الأمامية."
 
-#, python-format
-#~ msgid "Change Unit Price - Unauthorized function"
-#~ msgstr "تغيير سعر البيع  - ليس لديك صلاحية"
+#. module: pos_access_right
+#: model:ir.model,name:pos_access_right.model_res_users
+msgid "User"
+msgstr "المستخدم"
 
-#, python-format
-#~ msgid "Delete Order - Unauthorized function"
-#~ msgstr "حذف أمر مبيعات  - ليس لديك صلاحية"
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/order_tabs.esm.js:0
+msgid "You do not have permission to open multiple order."
+msgstr "ليس لديك إذن بفتح عدة طلبات."
 
-#, python-format
-#~ msgid "Discount - Unauthorized function"
-#~ msgstr "تخفيض  - ليس لديك صلاحية"
-
-#, python-format
-#~ msgid "Many Orders - Unauthorized function"
-#~ msgstr "تعدد أوامر مبيعات  - ليس لديك صلاحية"
-
-#, python-format
-#~ msgid "Negative Quantity - Unauthorized function"
-#~ msgstr "كمية بالسالب - ليس لديك صلاحية"
-
-#, python-format
-#~ msgid "Payment - Unauthorized function"
-#~ msgstr "الدفع - ليس لديك صلاحية"
-
-#, python-format
-#~ msgid "Please ask your manager to do it."
-#~ msgstr "قم بطلب مساعدة من المشرف."
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/product_screen.esm.js:0
+msgid "You do not have permission to set negative quantity."
+msgstr "ليس لديك إذن بتعيين كمية سالبة."

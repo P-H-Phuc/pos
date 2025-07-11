@@ -1,23 +1,26 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * pos_access_right
+# 	* pos_access_right
 #
-# Translators:
-# Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 05:50+0000\n"
-"PO-Revision-Date: 2022-03-23 12:17+0000\n"
-"Last-Translator: Noel estudillo <noelestudilloviera@gmail.com>\n"
-"Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
-"Language: ca\n"
+"POT-Creation-Date: 2026-01-28 10:29+0000\n"
+"PO-Revision-Date: 2026-01-28 10:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"Plural-Forms: \n"
+
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/order_tabs.esm.js:0
+#: code:addons/pos_access_right/static/src/js/product_screen.esm.js:0
+msgid "Not Allowed"
+msgstr "No permès"
 
 #. module: pos_access_right
 #: model:ir.model.fields,field_description:pos_access_right.field_pos_config__group_discount_id
@@ -70,12 +73,7 @@ msgstr "Punt de Venda - Canviar preu unitari"
 #. module: pos_access_right
 #: model:ir.model,name:pos_access_right.model_pos_config
 msgid "Point of Sale Configuration"
-msgstr "Punt de Venda - Descomptes"
-
-#. module: pos_access_right
-#: model:ir.model,name:pos_access_right.model_pos_session
-msgid "Point of Sale Session"
-msgstr ""
+msgstr "Configuració del Punt de Venda"
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_discount_id
@@ -101,8 +99,8 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Allow Unit Price Change' "
 "Group to the Point of Sale Frontend."
 msgstr ""
-"Aquest camp està aquí per passar el ID del grup 'TPV - Canviar Preu Unitari' "
-"cap a la pantalla del Punt de Venda."
+"Aquest camp està aquí per passar el ID del grup 'TPV - Canviar Preu Unitari'"
+" cap a la pantalla del Punt de Venda."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_delete_order_id
@@ -110,8 +108,8 @@ msgid ""
 "This field is there to pass the id of the 'PoS - Delete Order' Group to the "
 "Point of Sale Frontend."
 msgstr ""
-"Aquest camp està aquí per passar el ID del grup 'TPV - Esborrar Comanda' cap "
-"a la pantalla del Punt de Venda."
+"Aquest camp està aquí per passar el ID del grup 'TPV - Esborrar Comanda' cap"
+" a la pantalla del Punt de Venda."
 
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_multi_order_id
@@ -125,39 +123,25 @@ msgstr ""
 #. module: pos_access_right
 #: model:ir.model.fields,help:pos_access_right.field_pos_config__group_payment_id
 msgid ""
-"This field is there to pass the id of the 'PoS - Payment' Group to the Point "
-"of Sale Frontend."
+"This field is there to pass the id of the 'PoS - Payment' Group to the Point"
+" of Sale Frontend."
 msgstr ""
-"Aquest camp està allà per passar l'identificador del grup \"PoS - Pagament\" "
-"al Frontend del punt de venda."
+"Aquest camp està allà per passar l'identificador del grup \"PoS - Pagament\""
+" al Frontend del punt de venda."
 
-#, python-format
-#~ msgid "Change Unit Price - Unauthorized function"
-#~ msgstr "Canviar preu unitari - Funció no autoritzada"
+#. module: pos_access_right
+#: model:ir.model,name:pos_access_right.model_res_users
+msgid "User"
+msgstr "Usuari"
 
-#, python-format
-#~ msgid "Delete Order - Unauthorized function"
-#~ msgstr "Esborrar comanda - Funció no autoritzada"
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/order_tabs.esm.js:0
+msgid "You do not have permission to open multiple order."
+msgstr "No tens permís per obrir diverses comandes."
 
-#, python-format
-#~ msgid "Discount - Unauthorized function"
-#~ msgstr "Descomptes - Funció no autoritzada"
-
-#, python-format
-#~ msgid "Many Orders - Unauthorized function"
-#~ msgstr "Múltiples Comandes - Funció no autoritzada"
-
-#, python-format
-#~ msgid "Negative Quantity - Unauthorized function"
-#~ msgstr "Quantitat Negativa - Funció no autoritzada"
-
-#, python-format
-#~ msgid "Payment - Unauthorized function"
-#~ msgstr "Descomptes - Funció no autoritzada"
-
-#, python-format
-#~ msgid "Please ask your manager to do it."
-#~ msgstr "Si us plau, pregunti al seu administrador per fer-ho."
-
-#~ msgid "pos.config"
-#~ msgstr "pos.config"
+#. module: pos_access_right
+#. odoo-javascript
+#: code:addons/pos_access_right/static/src/js/product_screen.esm.js:0
+msgid "You do not have permission to set negative quantity."
+msgstr "No tens permís per establir una quantitat negativa."
