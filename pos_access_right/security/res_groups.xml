@@ -5,7 +5,6 @@
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 -->
 <odoo noupdate="1">
-
     <record id="group_negative_qty" model="res.groups">
         <field name="name">Point of Sale - Negative Quantity</field>
         <field name="category_id" ref="base.module_category_usability" />
@@ -35,5 +34,4 @@
         <field name="name">Point of Sale - Payment</field>
         <field name="category_id" ref="base.module_category_usability" />
     </record>
-
 </odoo>
