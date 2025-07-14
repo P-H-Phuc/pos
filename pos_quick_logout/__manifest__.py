@@ -4,14 +4,18 @@
 
 {
     "name": "Point of Sale - Quick Logout",
-    "version": "13.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales/Point Of Sale",
     "summary": "Allow PoS user to logout quickly after user changed",
     "license": "AGPL-3",
     "author": "La Louve, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/pos",
     "depends": ["point_of_sale"],
-    "data": ["views/pos_config_view.xml", "views/assets.xml"],
-    "qweb": ["static/src/xml/pos_quick_logout.xml"],
+    "assets": {
+        "point_of_sale._assets_pos": [
+            "pos_quick_logout/static/src/js/pos_quick_logout.esm.js",
+            "pos_quick_logout/static/src/xml/pos_quick_logout.xml",
+        ],
+    },
     "installable": True,
 }
