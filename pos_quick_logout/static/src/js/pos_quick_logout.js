@@ -4,7 +4,7 @@
     @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 */
-odoo.define("pos_quick_logout.pos_quick_logout", function(require) {
+odoo.define("pos_quick_logout.pos_quick_logout", function (require) {
     "use strict";
 
     var chrome = require("point_of_sale.chrome");
@@ -13,37 +13,37 @@ odoo.define("pos_quick_logout.pos_quick_logout", function(require) {
     Chrome.Chrome
     ******************************************************** */
     chrome.Chrome.include({
-        start: function() {
+        start: function () {
             this._super();
             this.timer = false;
             this.idletimeout();
         },
-        idletimeout: function() {
+        idletimeout: function () {
             var self = this;
-            $(document).bind("mousemove keypress mousedown click scroll", function() {
+            $(document).bind("mousemove keypress mousedown click scroll", function () {
                 self.resetTimer();
             });
         },
-        logout: function() {
+        logout: function () {
             var self = this;
             if (self.widget.username) {
                 self.pos.set_cashier(self.pos.user);
                 self.widget.username.renderElement();
             }
         },
-        resetTimer: function() {
+        resetTimer: function () {
             var self = this;
             clearTimeout(this.timer);
             if (self.pos.config && self.pos.config.logout_timeout) {
-                this.timer = setTimeout(function() {
+                this.timer = setTimeout(function () {
                     self.logout();
                 }, self.pos.config.logout_timeout * 1000);
             }
         },
-        renderElement: function() {
+        renderElement: function () {
             this._super();
             var self = this;
-            this.$("#pos-quick-logout").click(function() {
+            this.$("#pos-quick-logout").click(function () {
                 self.pos.set_cashier(self.pos.user);
                 self.widget.username.renderElement();
             });
@@ -54,7 +54,7 @@ odoo.define("pos_quick_logout.pos_quick_logout", function(require) {
     Chrome.Chrome
     ******************************************************** */
     chrome.UsernameWidget.include({
-        renderElement: function() {
+        renderElement: function () {
             this._super();
             if (this.pos.user.id === this.pos.get_cashier().id) {
                 $("#pos-quick-logout").hide();

@@ -17,36 +17,39 @@ Point of Sale - Quick Logout
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github
-    :target: https://github.com/OCA/pos/tree/13.0/pos_quick_logout
+    :target: https://github.com/OCA/pos/tree/18.0/pos_quick_logout
     :alt: OCA/pos
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/pos-13-0/pos-13-0-pos_quick_logout
+    :target: https://translation.odoo-community.org/projects/pos-18-0/pos-18-0-pos_quick_logout
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=13.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/pos&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module was written to extend the functionality of Odoo Point Of Sale about
-changing of cashier.
+This module was written to extend the functionality of Odoo Point Of
+Sale about changing of cashier.
 
-This module add a simple button 'Log Out' available in Point Of Sale Front End
-UI. This button is available when the cashier is not the initial user logged in
-Odoo. It allows to log out quickly, wihout selecting again the user in the
-list. This module is useful for users that use regularly the change of cashier,
-especialy with 'pos_access_right', when users doesn't have the right to do some
-actions like set discount, change unit price, ...
+This module add a simple button 'Log Out' available in Point Of Sale
+Front End UI. This button is available when the cashier is not the
+initial user logged in Odoo. It allows to log out quickly, wihout
+selecting again the user in the list. This module is useful for users
+that use regularly the change of cashier, especialy with
+'pos_access_right', when users doesn't have the right to do some actions
+like set discount, change unit price, ...
 
+- By default, the header is unchanged
 
-* By default, the header is unchanged
+|image|
 
-.. image:: https://raw.githubusercontent.com/OCA/pos/13.0/pos_quick_logout/static/description/cashier_user_identical.png
+- If the cashier changed, and is not the user logged in Odoo, the extra
+  button appears
 
+|image1|
 
-* If the cashier changed, and is not the user logged in Odoo, the extra button appears
-
-.. image:: https://raw.githubusercontent.com/OCA/pos/13.0/pos_quick_logout/static/description/cashier_user_different.png
+.. |image| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_quick_logout/static/description/cashier_user_identical.png
+.. |image1| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_quick_logout/static/description/cashier_user_different.png
 
 **Table of contents**
 
@@ -59,7 +62,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/pos/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_quick_logout%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/pos/issues/new?body=module:%20pos_quick_logout%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -67,18 +70,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * La Louve
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Sylvain LE GAL <https://twitter.com/legalsylvain>
-* Druidoo <https://www.druidoo.io>
+- Sylvain LE GAL
+  <`https://twitter.com/legalsylvain\\> <https://twitter.com/legalsylvain\>>`__
+- Druidoo <`https://www.druidoo.io\\> <https://www.druidoo.io\>>`__
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -90,6 +94,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/13.0/pos_quick_logout>`_ project on GitHub.
+This module is part of the `OCA/pos <https://github.com/OCA/pos/tree/18.0/pos_quick_logout>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
