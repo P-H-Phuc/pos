@@ -25,6 +25,7 @@ class SaleOrder(models.Model):
             "pricelist_id": order_data["pricelist_id"],
             "fiscal_position_id": order_data["fiscal_position_id"],
             "order_line": order_lines,
+            "warehouse_id": session.config_id.picking_type_id.warehouse_id.id,
         }
 
     @api.model
