@@ -4,8 +4,8 @@
     "name": "POS - Forbid New Customer Creation",
     "summary": """Forbid customer creation from the POS""",
     "author": "Odoo Community Association (OCA),"
-              " BEES coop - Cellule IT,"
-              " Coop IT Easy SC",
+    " BEES coop - Cellule IT,"
+    " Coop IT Easy SC",
     "website": "https://github.com/OCA/pos",
     "category": "Point Of Sale",
     "version": "12.0.2.0.2",
