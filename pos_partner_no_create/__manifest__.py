@@ -8,9 +8,13 @@
     " Coop IT Easy SC",
     "website": "https://github.com/OCA/pos",
     "category": "Point Of Sale",
-    "version": "12.0.2.0.2",
+    "version": "16.0.1.0.0",
     "depends": ["point_of_sale"],
-    "qweb": ["static/src/xml/templates.xml"],
+    "assets": {
+        "point_of_sale.assets": [
+            "pos_partner_no_create/static/src/xml/PartnerListScreen.xml",
+        ],
+    },
     "installable": True,
     "license": "AGPL-3",
 }
