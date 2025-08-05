@@ -45,6 +45,11 @@ msgid "Pay invoice"
 msgstr ""
 
 #. module: pos_session_pay_invoice
+#: model:ir.model,name:pos_session_pay_invoice.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: pos_session_pay_invoice
 #: model:ir.model,name:pos_session_pay_invoice.model_pos_session
 msgid "Point of Sale Session"
 msgstr ""
