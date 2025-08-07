@@ -15,6 +15,15 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         super().setUpClass(chart_template_ref=chart_template_ref)
         cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         cls.pos_config.cash_control = True
+        cls.new_journal = cls.env["account.journal"].create(
+            {
+                "type": "cash",
+                "name": "New Cash",
+                "code": "NEWCASH",
+                "company_id": cls.env.company.id,
+            }
+        )
+        cls.journal_cash = cls.company_data["default_journal_cash"]
         cls.invoice_out = cls.env["account.move"].create(
             {
                 "company_id": cls.company.id,
@@ -23,9 +32,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
                 "invoice_date": "2016-03-12",
                 "move_type": "out_invoice",
                 "invoice_line_ids": [
-                    (
-                        0,
-                        0,
+                    odoo.Command.create(
                         {
                             "product_id": cls.product3.id,
                             "name": "Producto de prueba",
@@ -46,9 +53,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
                 "date": "2016-03-12",
                 "invoice_date": "2016-03-12",
                 "invoice_line_ids": [
-                    (
-                        0,
-                        0,
+                    odoo.Command.create(
                         {
                             "product_id": cls.product3.id,
                             "name": "Producto de prueba",
@@ -84,6 +89,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         wizard_context = session.button_show_wizard_pay_in_invoice()["context"]
         cash_in = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_in) as form:
+            form.journal_id = self.journal_cash
             form.invoice_id = self.invoice_in
             self.assertEqual(form.amount, -100)
         cash_in.browse(form.id).action_pay_invoice()
@@ -100,6 +106,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         wizard_context = session.button_show_wizard_pay_out_invoice()["context"]
         cash_out = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_out) as form:
+            form.journal_id = self.journal_cash
             form.invoice_id = self.invoice_out
             self.assertEqual(form.amount, 100)
             form.amount = 75
@@ -117,6 +124,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         wizard_context = session.button_show_wizard_pay_out_refund()["context"]
         cash_out = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_out) as form:
+            form.journal_id = self.journal_cash
             form.invoice_id = self.refund
             self.assertEqual(form.amount, -100)
         cash_out.browse(form.id).action_pay_invoice()
@@ -125,3 +133,30 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         self.invoice_out.invalidate_recordset()
         self.refund.invalidate_recordset()
         self.assertEqual(self.refund.amount_residual, 0.0)
+
+    def test_journal_availables(self):
+        """Test that only the journals of the POS session are available
+        when the context pos_session_id is set.
+        """
+        self.pos_config.open_ui()
+        pos_session = self.pos_config.current_session_id
+        self.assertIn(
+            self.journal_cash.id, pos_session.payment_method_ids.journal_id.ids
+        )
+        self.assertNotIn(
+            self.new_journal.id, pos_session.payment_method_ids.journal_id.ids
+        )
+        # Without pos_session_id in the context, all cash journals are available.
+        journals = self.env["account.journal"].name_search("Cash")
+        journal_ids = [journal[0] for journal in journals]
+        self.assertIn(self.new_journal.id, journal_ids)
+        self.assertIn(self.journal_cash.id, journal_ids)
+        # With pos_session_id in the context, only the journals of the session are available.
+        journals = (
+            self.env["account.journal"]
+            .with_context(pos_session_id=pos_session.id)
+            .name_search("Cash")
+        )
+        journal_ids = [journal[0] for journal in journals]
+        self.assertNotIn(self.new_journal.id, journal_ids)
+        self.assertIn(self.journal_cash.id, journal_ids)
