@@ -40,6 +40,11 @@ msgid "Cash Pay invoice from bank statement"
 msgstr ""
 
 #. module: pos_session_pay_invoice
+#: model:ir.model,name:pos_session_pay_invoice.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: pos_session_pay_invoice
 #: model:ir.actions.act_window,name:pos_session_pay_invoice.action_pos_invoice_in_control
 msgid "Pay invoice"
 msgstr ""
