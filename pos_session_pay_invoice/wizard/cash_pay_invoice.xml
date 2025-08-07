@@ -14,9 +14,16 @@
                 <attribute name="force_save">1</attribute>
             </xpath>
             <xpath expr="//field[@name='journal_id']" position="attributes">
-                <attribute
-                    name="context"
-                >{'pos_session_id': context.get('pos_session_id')}</attribute>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='journal_id']" position="after">
+                <field name="pos_session_id" invisible="1" />
+                <field name="pos_payment_method_domain" invisible="1" />
+                <field
+                    name="pos_payment_method_id"
+                    required="1"
+                    domain="pos_payment_method_domain"
+                />
             </xpath>
         </field>
     </record>
