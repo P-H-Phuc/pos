@@ -49,14 +49,14 @@ msgid "Cash Pay invoice from bank statement"
 msgstr "Fattura pagamento contanti da estratto conto bancario"
 
 #. module: pos_session_pay_invoice
-#: model:ir.model,name:pos_session_pay_invoice.model_account_journal
-msgid "Journal"
-msgstr ""
-
-#. module: pos_session_pay_invoice
 #: model:ir.actions.act_window,name:pos_session_pay_invoice.action_pos_invoice_in_control
 msgid "Pay invoice"
 msgstr "Paga la fattura"
+
+#. module: pos_session_pay_invoice
+#: model:ir.model.fields,field_description:pos_session_pay_invoice.field_cash_pay_invoice__pos_payment_method_id
+msgid "Payment Method"
+msgstr "Metodo di pagamento"
 
 #. module: pos_session_pay_invoice
 #: model:ir.model,name:pos_session_pay_invoice.model_pos_order
@@ -69,9 +69,28 @@ msgid "Point of Sale Session"
 msgstr "Sessione punto vendita"
 
 #. module: pos_session_pay_invoice
+#: model:ir.model.fields,field_description:pos_session_pay_invoice.field_cash_pay_invoice__pos_payment_method_domain
+msgid "Pos Payment Method Domain"
+msgstr ""
+
+#. module: pos_session_pay_invoice
+#: model:ir.model.fields,field_description:pos_session_pay_invoice.field_cash_pay_invoice__pos_session_id
+msgid "Pos Session"
+msgstr ""
+
+#. module: pos_session_pay_invoice
 #: model_terms:ir.ui.view,arch_db:pos_session_pay_invoice.view_pos_config_kanban
 msgid "Summary"
 msgstr "Riepilogo"
+
+#. module: pos_session_pay_invoice
+#. odoo-python
+#: code:addons/pos_session_pay_invoice/models/pos_session.py:0
+#, python-format
+msgid ""
+"You can only pay invoices in an opened session. Please refresh the window "
+"and try again."
+msgstr ""
 
 #~ msgid "Amount"
 #~ msgstr "Valore"
@@ -118,9 +137,6 @@ msgstr "Riepilogo"
 
 #~ msgid "Last Updated on"
 #~ msgstr "Ultimo aggiornamento il"
-
-#~ msgid "Payment Method"
-#~ msgstr "Metodo di pagamento"
 
 #~ msgid "Payment Method Count"
 #~ msgstr "Conteggio metodo di pagamento"
