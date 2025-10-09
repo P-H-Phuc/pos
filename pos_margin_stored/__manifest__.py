@@ -11,8 +11,6 @@
     "maintainers": ["quentinDupont"],
     "website": "https://github.com/OCA/pos",
     "license": "AGPL-3",
-    "depends": [
-        "pos_margin",
-    ],
+    "depends": ["point_of_sale"],
     "installable": True,
 }
