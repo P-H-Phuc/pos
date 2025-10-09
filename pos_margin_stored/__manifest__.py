@@ -4,7 +4,7 @@
 
 {
     "name": "PoS Order Margin",
-    "summary": "Margin Stored on PoS Order",
+    "summary": "Margin Stored on PoS Order and Pos Order Line",
     "version": "16.0.1.0.0",
     "category": "Point Of Sale",
     "author": "GRAP, Odoo Community Association (OCA)",
