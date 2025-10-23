@@ -76,7 +76,7 @@ addon | version | maintainers | summary
 [pos_product_label](pos_product_label/) | 16.0.1.0.2 | <a href='https://github.com/ivantodorovich'><img src='https://github.com/ivantodorovich.png' width='32' height='32' style='border-radius:50%;' alt='ivantodorovich'/></a> | Print product labels from the POS
 [pos_product_mergeable_line](pos_product_mergeable_line/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Allows to configure at the product level, if an order line can be merged or not.
 [pos_product_multi_barcode](pos_product_multi_barcode/) | 16.0.1.0.2 |  | Make product multi barcodes usable in the point of sale
-[pos_product_packaging_container_deposit](pos_product_packaging_container_deposit/) | 16.0.1.0.1 |  | Add the container deposit fees in a POS order
+[pos_product_packaging_container_deposit](pos_product_packaging_container_deposit/) | 16.0.1.1.0 |  | Add the container deposit fees in a POS order
 [pos_product_packaging_multi_barcode](pos_product_packaging_multi_barcode/) | 16.0.1.0.0 |  | Make product packaging multi barcodes usable in the point of sale
 [pos_product_pricelist_alternative](pos_product_pricelist_alternative/) | 16.0.1.0.0 |  | Calculate POS product price based on alternative pricelists
 [pos_product_quick_info](pos_product_quick_info/) | 16.0.1.0.2 |  | Display product info by one click in Point of Sale
