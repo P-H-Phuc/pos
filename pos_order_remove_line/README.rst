@@ -36,6 +36,25 @@ interface.
 .. contents::
    :local:
 
+Configuration
+=============
+
+- Go to *Point of Sale > Configuration > PoS Interface*,
+- Check Show Remove Button and Show Warning in *Remove Order Line in
+  PoS*
+
+|Config PoS Remove Line|
+
+.. |Config PoS Remove Line| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_order_remove_line/static/description/config_pos_order_remove_line.png
+
+Usage
+=====
+
+Open a PoS interface, create a order, you can see remove button on order
+line: |POS Remove Line|
+
+.. |POS Remove Line| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_order_remove_line/static/description/pos_order_remove_line.png
+
 Bug Tracker
 ===========
 
@@ -64,6 +83,10 @@ Contributors
 - `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
 
   - Bhavesh Heliconia
+
+- `Trobz <https://trobz.com>`__
+
+  - Phan Hong Phuc <phucph@trobz.com>
 
 Maintainers
 -----------
