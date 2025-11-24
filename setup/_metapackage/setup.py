@@ -58,6 +58,7 @@ setuptools.setup(
         'odoo-addon-pos_payment_terminal>=16.0dev,<16.1dev',
         'odoo-addon-pos_payment_usability>=16.0dev,<16.1dev',
         'odoo-addon-pos_picking_delayed>=16.0dev,<16.1dev',
+        'odoo-addon-pos_picking_load>=16.0dev,<16.1dev',
         'odoo-addon-pos_price_to_weight>=16.0dev,<16.1dev',
         'odoo-addon-pos_pricelist_technical>=16.0dev,<16.1dev',
         'odoo-addon-pos_product_display_default_code>=16.0dev,<16.1dev',
