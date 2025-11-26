@@ -41,10 +41,7 @@ Installation
 
 This module is designed to be installed on the *main Odoo server*. On
 the *POSbox/IoTbox*, you should install the module *hw_x* depending on
-the protocol implemented in your device. Remember that the POSbox/IoTbox
-runs Odoo v12 (even if your Odoo server runs v13 or v14), so you should
-look in the 12.0 branch of the `OCA POS
-project <https://github.com/OCA/pos>`__ to find the *hw_x* modules.
+the protocol implemented in your device.
 
 Ingenico
 <`http://en.wikipedia.org/wiki/Ingenico\\> <http://en.wikipedia.org/wiki/Ingenico\>>`__
@@ -72,11 +69,16 @@ Configuration
 Usage
 =====
 
-In the frontend of the POS, when you select a payment method that has a
-payment mode with *Use a Payment Terminal* set to *OCA Payment
-Terminal*, you will have an additionnal *Send* button: if you click on
-that button, the amount, the currency and the payment mode will be sent
-to the POSbox/IoTBox/pywebdriver.
+- In the frontend of the POS, when you select a payment method that has
+  a payment mode with *Use a Payment Terminal* set to *OCA Payment
+  Terminal*, you will have an additionnal *Send* button: if you click on
+  that button, the amount, the currency and the payment mode will be
+  sent to the POSbox/IoTBox/pywebdriver.
+- To enable the proxy when use *OCA Payment Termail*, you can go to
+  ``Point of Sale > Settings > Connected Devices``, then enable IoT Box,
+  enter IP Address and enable ``OCA Payment Terminal``. When the OCA
+  Payment Terminal is enable, you can block the return to the basket
+  from the payment screen by enabling the *Hide Back Button* option.
 
 Bug Tracker
 ===========
@@ -105,6 +107,9 @@ Contributors
 - Aurelien Dumaine
 - Alexis de Lattre <alexis.delattre@akretion.com>
 - Sylvain LE GAL (https://twitter.com/legalsylvain)
+- `Trobz <https://www.trobz.com>`__
+
+  - Phan Hong Phuc <phucph@trobz.com>
 
 Maintainers
 -----------

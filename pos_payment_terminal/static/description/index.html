@@ -391,10 +391,7 @@ the Point of Sale.</p>
 <h1><a class="toc-backref" href="#toc-entry-1">Installation</a></h1>
 <p>This module is designed to be installed on the <em>main Odoo server</em>. On
 the <em>POSbox/IoTbox</em>, you should install the module <em>hw_x</em> depending on
-the protocol implemented in your device. Remember that the POSbox/IoTbox
-runs Odoo v12 (even if your Odoo server runs v13 or v14), so you should
-look in the 12.0 branch of the <a class="reference external" href="https://github.com/OCA/pos">OCA POS
-project</a> to find the <em>hw_x</em> modules.</p>
+the protocol implemented in your device.</p>
 <p>Ingenico
 &lt;<a class="reference external" href="http://en.wikipedia.org/wiki/Ingenico&gt;">http://en.wikipedia.org/wiki/Ingenico\&gt;</a>
 card readers for France support the Telium protocol implemented in the
@@ -417,11 +414,18 @@ instead.</li>
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#toc-entry-3">Usage</a></h1>
-<p>In the frontend of the POS, when you select a payment method that has a
-payment mode with <em>Use a Payment Terminal</em> set to <em>OCA Payment
+<ul class="simple">
+<li>In the frontend of the POS, when you select a payment method that has
+a payment mode with <em>Use a Payment Terminal</em> set to <em>OCA Payment
 Terminal</em>, you will have an additionnal <em>Send</em> button: if you click on
-that button, the amount, the currency and the payment mode will be sent
-to the POSbox/IoTBox/pywebdriver.</p>
+that button, the amount, the currency and the payment mode will be
+sent to the POSbox/IoTBox/pywebdriver.</li>
+<li>To enable the proxy when use <em>OCA Payment Termail</em>, you can go to
+<tt class="docutils literal">Point of Sale &gt; Settings &gt; Connected Devices</tt>, then enable IoT Box,
+enter IP Address and enable <tt class="docutils literal">OCA Payment Terminal</tt>. When the OCA
+Payment Terminal is enable, you can block the return to the basket
+from the payment screen by enabling the <em>Hide Back Button</em> option.</li>
+</ul>
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-4">Bug Tracker</a></h1>
@@ -448,6 +452,10 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <li>Aurelien Dumaine</li>
 <li>Alexis de Lattre &lt;<a class="reference external" href="mailto:alexis.delattre&#64;akretion.com">alexis.delattre&#64;akretion.com</a>&gt;</li>
 <li>Sylvain LE GAL (<a class="reference external" href="https://twitter.com/legalsylvain">https://twitter.com/legalsylvain</a>)</li>
+<li><a class="reference external" href="https://www.trobz.com">Trobz</a><ul>
+<li>Phan Hong Phuc &lt;<a class="reference external" href="mailto:phucph&#64;trobz.com">phucph&#64;trobz.com</a>&gt;</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="maintainers">

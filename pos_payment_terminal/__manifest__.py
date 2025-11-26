@@ -5,7 +5,7 @@
 
 {
     "name": "POS Payment Terminal",
-    "version": "16.0.1.0.3",
+    "version": "18.0.1.0.0",
     "category": "Point Of Sale",
     "summary": "Point of sale: support generic payment terminal",
     "author": (
@@ -20,11 +20,12 @@
     "depends": ["point_of_sale"],
     "data": [
         "views/pos_payment_method.xml",
+        "views/res_config_settings_views.xml",
     ],
     "assets": {
-        "point_of_sale.assets": [
-            "pos_payment_terminal/static/src/js/payment_terminal.js",
-            "pos_payment_terminal/static/src/js/models.js",
+        "point_of_sale._assets_pos": [
+            "pos_payment_terminal/static/src/app/*",
+            "pos_payment_terminal/static/src/overrides/**/*",
         ],
     },
     "installable": True,

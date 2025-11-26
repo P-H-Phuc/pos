@@ -4,8 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-23 02:51+0000\n"
+"PO-Revision-Date: 2025-12-23 02:51+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,18 +17,8 @@ msgstr ""
 
 #. module: pos_payment_terminal
 #. odoo-javascript
-#: code:addons/pos_payment_terminal/static/src/js/models.js:0
-#, python-format
-msgid ""
-"A payment terminal has been linked to one payment provider but the IoT Box "
-"location has not been configured."
-msgstr ""
-
-#. module: pos_payment_terminal
-#. odoo-javascript
-#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.js:0
-#, python-format
-msgid "Cannot process transactions with zero or negative amount."
+#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
+msgid "Cannot process transactions with negative amount."
 msgstr ""
 
 #. module: pos_payment_terminal
@@ -41,18 +33,16 @@ msgstr ""
 
 #. module: pos_payment_terminal
 #. odoo-javascript
-#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.js:0
-#, python-format
-msgid ""
-"Failed to send the amount to pay to the payment terminal. Press the red "
-"button on the payment terminal and try again."
+#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
+msgid "Connecting to the payment terminal failed"
 msgstr ""
 
 #. module: pos_payment_terminal
-#. odoo-python
-#: code:addons/pos_payment_terminal/models/pos_payment_method.py:0
-#, python-format
-msgid "OCA Payment Terminal"
+#. odoo-javascript
+#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
+msgid ""
+"Failed to send the amount to pay to the payment terminal.Press the red "
+"button on the payment terminal and try again."
 msgstr ""
 
 #. module: pos_payment_terminal
@@ -62,16 +52,13 @@ msgstr ""
 
 #. module: pos_payment_terminal
 #. odoo-javascript
-#: code:addons/pos_payment_terminal/static/src/js/models.js:0
-#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.js:0
-#, python-format
+#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
 msgid "Payment Terminal Error"
 msgstr ""
 
 #. module: pos_payment_terminal
 #. odoo-javascript
-#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.js:0
-#, python-format
+#: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
 msgid ""
 "Please press the red button on the payment terminal to cancel the "
 "transaction."
@@ -83,13 +70,8 @@ msgid "Point of Sale Payment Methods"
 msgstr ""
 
 #. module: pos_payment_terminal
-#: model:ir.model,name:pos_payment_terminal.model_pos_session
-msgid "Point of Sale Session"
-msgstr ""
-
-#. module: pos_payment_terminal
 #: model:ir.model.fields,field_description:pos_payment_terminal.field_pos_payment_method__oca_payment_terminal_id
-msgid "Terminal identifier"
+msgid "Terminal Identifier"
 msgstr ""
 
 #. module: pos_payment_terminal

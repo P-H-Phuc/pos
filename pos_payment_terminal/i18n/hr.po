@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 02:54+0000\n"
-"PO-Revision-Date: 2025-12-23 02:54+0000\n"
+"POT-Creation-Date: 2025-12-23 02:53+0000\n"
+"PO-Revision-Date: 2025-12-23 02:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,23 +19,23 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
 msgid "Cannot process transactions with negative amount."
-msgstr "Impossible d'envoyer des montants négatifs au lecteur CB"
+msgstr "Nije moguće obraditi transakcije s negativnim iznosom."
 
 #. module: pos_payment_terminal
 #: model:ir.model.fields.selection,name:pos_payment_terminal.selection__pos_payment_method__oca_payment_terminal_mode__card
 msgid "Card"
-msgstr "Carte"
+msgstr "Kartica"
 
 #. module: pos_payment_terminal
 #: model:ir.model.fields.selection,name:pos_payment_terminal.selection__pos_payment_method__oca_payment_terminal_mode__check
 msgid "Check"
-msgstr "Chèque"
+msgstr "Ček"
 
 #. module: pos_payment_terminal
 #. odoo-javascript
 #: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
 msgid "Connecting to the payment terminal failed"
-msgstr "La connexion au terminal de paiement a échoué"
+msgstr "Povezivanje s terminalom za plaćanje nije uspjelo."
 
 #. module: pos_payment_terminal
 #. odoo-javascript
@@ -44,19 +44,19 @@ msgid ""
 "Failed to send the amount to pay to the payment terminal.Press the red "
 "button on the payment terminal and try again."
 msgstr ""
-"Échec de l’envoi du montant à payer au terminal de paiement. "
-"Appuyez sur le bouton rouge du terminal de paiement et réessayez."
+"Slanje iznosa za plaćanje na terminal za plaćanje nije uspjelo. "
+"Pritisnite crvenu tipku na terminalu za plaćanje i pokušajte ponovno."
 
 #. module: pos_payment_terminal
 #: model:ir.model.fields,field_description:pos_payment_terminal.field_pos_payment_method__oca_payment_terminal_mode
 msgid "Payment Mode"
-msgstr "Mode de paiement"
+msgstr "Način Plaćanja"
 
 #. module: pos_payment_terminal
 #. odoo-javascript
 #: code:addons/pos_payment_terminal/static/src/js/payment_terminal.esm.js:0
 msgid "Payment Terminal Error"
-msgstr "Erreur - Lecteur CB"
+msgstr "Greška Terminala Za Plaćanje"
 
 #. module: pos_payment_terminal
 #. odoo-javascript
@@ -65,17 +65,18 @@ msgid ""
 "Please press the red button on the payment terminal to cancel the "
 "transaction."
 msgstr ""
-"Appuyez sur le bouton rouge du terminal de paiement et réessayez."
+"Molimo pritisnite crvenu tipku na terminalu za plaćanje kako biste otkazali "
+"transakciju."
 
 #. module: pos_payment_terminal
 #: model:ir.model,name:pos_payment_terminal.model_pos_payment_method
 msgid "Point of Sale Payment Methods"
-msgstr "Modes de paiement du point de vente"
+msgstr "Načini plaćanja na prodajnom mjestu"
 
 #. module: pos_payment_terminal
 #: model:ir.model.fields,field_description:pos_payment_terminal.field_pos_payment_method__oca_payment_terminal_id
 msgid "Terminal Identifier"
-msgstr "Identifiant du terminal"
+msgstr "Identifikator Terminala"
 
 #. module: pos_payment_terminal
 #: model:ir.model.fields,help:pos_payment_terminal.field_pos_payment_method__oca_payment_terminal_id
@@ -83,5 +84,5 @@ msgid ""
 "The identifier of the terminal as known by the hardware proxy. Leave empty "
 "if the proxy has only one terminal connected."
 msgstr ""
-"L’identifiant du terminal tel qu’il est connu par le proxy matériel. "
-"Laissez ce champ vide si le proxy n’a qu’un seul terminal connecté."
+"Identifikator terminala kako ga prepoznaje hardverski proxy. "
+"Ostavite prazno ako je na proxy povezan samo jedan terminal."
