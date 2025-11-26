@@ -369,9 +369,9 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:90c98f4f7f6b65736ec4de9619ac22856ba9e32c5c63cb5444c4b63c381bab13
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/pos/tree/16.0/pos_payment_terminal"><img alt="OCA/pos" src="https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/pos-16-0/pos-16-0-pos_payment_terminal"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/pos&amp;target_branch=16.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>This module adds support for credit card reader and checks printer
-in the Point of Sale.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/pos/tree/18.0/pos_payment_terminal"><img alt="OCA/pos" src="https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/pos-18-0/pos-18-0-pos_payment_terminal"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/pos&amp;target_branch=18.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>This module adds support for credit card reader and checks printer in
+the Point of Sale.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -389,35 +389,46 @@ in the Point of Sale.</p>
 </div>
 <div class="section" id="installation">
 <h1><a class="toc-backref" href="#toc-entry-1">Installation</a></h1>
-<p>This module is designed to be installed on the
-<em>main Odoo server</em>. On the <em>POSbox/IoTbox</em>, you should install the module
-<em>hw_x</em> depending on the protocol implemented in your device. Remember that the POSbox/IoTbox runs Odoo v12 (even if your Odoo server runs v13 or v14), so you should look in the 12.0 branch of the <a class="reference external" href="https://github.com/OCA/pos">OCA POS project</a> to find the <em>hw_x</em> modules.</p>
-<p><cite>Ingenico &lt;http://en.wikipedia.org/wiki/Ingenico&gt;</cite>
+<p>This module is designed to be installed on the <em>main Odoo server</em>. On
+the <em>POSbox/IoTbox</em>, you should install the module <em>hw_x</em> depending on
+the protocol implemented in your device. Remember that the POSbox/IoTbox
+runs Odoo v12 (even if your Odoo server runs v13 or v14), so you should
+look in the 12.0 branch of the <a class="reference external" href="https://github.com/OCA/pos">OCA POS
+project</a> to find the <em>hw_x</em> modules.</p>
+<p>Ingenico
+&lt;<a class="reference external" href="http://en.wikipedia.org/wiki/Ingenico&gt;">http://en.wikipedia.org/wiki/Ingenico\&gt;</a>
 card readers for France support the Telium protocol implemented in the
 <em>hw_telium_payment_terminal</em> module for the POSbox/IoTBox.</p>
-<p>You can also consider <a class="reference external" href="https://github.com/akretion/pywebdriver">pywebdriver project</a> as an alternative to the POSbox/IoTbox.</p>
+<p>You can also consider <a class="reference external" href="https://github.com/akretion/pywebdriver">pywebdriver
+project</a> as an alternative
+to the POSbox/IoTbox.</p>
 </div>
 <div class="section" id="configuration">
 <h1><a class="toc-backref" href="#toc-entry-2">Configuration</a></h1>
 <ul class="simple">
 <li>Go to <em>Point of Sale &gt; Configuration &gt; Payment Methods</em>, edit the
-payment method corresponding to the card reader and set
-the field <em>Use a payment terminal</em> to <em>OCA Payment Terminal</em>. A new field <em>Payment Mode</em> will appear, that has <em>Card</em> as defaut value. If the payment method is for Checks and you have a check printer, select <em>Check</em> instead.</li>
+payment method corresponding to the card reader and set the field <em>Use
+a payment terminal</em> to <em>OCA Payment Terminal</em>. A new field <em>Payment
+Mode</em> will appear, that has <em>Card</em> as defaut value. If the payment
+method is for Checks and you have a check printer, select <em>Check</em>
+instead.</li>
 </ul>
-<div class="figure">
-<img alt="https://raw.githubusercontent.com/OCA/pos/16.0/pos_payment_terminal/static/description/pos_payment_method_form.png" src="https://raw.githubusercontent.com/OCA/pos/16.0/pos_payment_terminal/static/description/pos_payment_method_form.png" />
-</div>
+<p><img alt="image1" src="https://raw.githubusercontent.com/OCA/pos/18.0/pos_payment_terminal/static/description/pos_payment_method_form.png" /></p>
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#toc-entry-3">Usage</a></h1>
-<p>In the frontend of the POS, when you select a payment method that has a payment mode with <em>Use a Payment Terminal</em> set to <em>OCA Payment Terminal</em>, you will have an additionnal <em>Send</em> button: if you click on that button, the amount, the currency and the payment mode will be sent to the POSbox/IoTBox/pywebdriver.</p>
+<p>In the frontend of the POS, when you select a payment method that has a
+payment mode with <em>Use a Payment Terminal</em> set to <em>OCA Payment
+Terminal</em>, you will have an additionnal <em>Send</em> button: if you click on
+that button, the amount, the currency and the payment mode will be sent
+to the POSbox/IoTBox/pywebdriver.</p>
 </div>
 <div class="section" id="bug-tracker">
 <h1><a class="toc-backref" href="#toc-entry-4">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/pos/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/pos/issues/new?body=module:%20pos_payment_terminal%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/pos/issues/new?body=module:%20pos_payment_terminal%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -448,7 +459,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/pos/tree/16.0/pos_payment_terminal">OCA/pos</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/pos/tree/18.0/pos_payment_terminal">OCA/pos</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>
