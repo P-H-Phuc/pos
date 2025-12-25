@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright since 2009 Trobz (<https://trobz.com/>).
@@ -22,9 +21,8 @@ from odoo import fields, models
 
 
 class AccountJournal(models.Model):
-    _inherit = 'account.journal'
+    _inherit = "account.journal"
 
     change_account_id = fields.Many2one(
-        comodel_name = 'account.account',
-        string="Account for the Change"
+        comodel_name="account.account", string="Account for the Change"
     )

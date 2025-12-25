@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Copyright since 2009 Trobz (<https://trobz.com/>).
@@ -18,26 +17,28 @@
 #
 ##############################################################################
 
-from odoo import api, fields, models
+from odoo import api, models
 
 
 class AccountBankStatement(models.Model):
-    _inherit = 'account.bank.statement'
+    _inherit = "account.bank.statement"
 
     @api.multi
     def confirm_bank_cash_change(self):
         self.ensure_one()
         positive_st_lines = self.line_ids.filtered(
-            lambda l: l.amount > 0.0 and l.pos_statement_id)
+            lambda l: l.amount > 0.0 and l.pos_statement_id
+        )
         pos_orders = []
         for line in positive_st_lines:
             if line.pos_statement_id.id in pos_orders:
                 continue
             pos_orders.append(line.pos_statement_id.id)
             lines = self.line_ids.filtered(
-                lambda l: line.pos_statement_id == l.pos_statement_id and \
-                    line.account_id == l.account_id and \
-                    line.journal_id == l.journal_id)
+                lambda l: line.pos_statement_id == l.pos_statement_id
+                and line.account_id == l.account_id
+                and line.journal_id == l.journal_id
+            )
             if not lines:
                 continue
             lines.cash_change_counterpart_creation()
@@ -45,17 +46,18 @@ class AccountBankStatement(models.Model):
     @api.multi
     def button_confirm_bank(self):
         self._balance_check()
-        statements = self.filtered(lambda r: r.state == 'open')
+        statements = self.filtered(lambda r: r.state == "open")
         for statement in statements:
             journal = statement.journal_id
-            if journal.type == 'cash' and journal.change_account_id:
+            if journal.type == "cash" and journal.change_account_id:
                 # Payment by customer
                 statement.confirm_bank_cash_change()
 
                 # Cashier withdraw the cash at POS
                 cashdraw_lines = statement.line_ids.filtered(
-                    lambda l: not l.pos_statement_id)
+                    lambda l: not l.pos_statement_id
+                )
                 if cashdraw_lines:
                     cashdraw_lines.cash_draw_statement_line()
 
-        super(AccountBankStatement, self).button_confirm_bank()
+        super().button_confirm_bank()
