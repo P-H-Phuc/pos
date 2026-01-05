@@ -17,7 +17,7 @@
 #
 ##############################################################################
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
@@ -26,24 +26,30 @@ class ResPartner(models.Model):
     credit_amount = fields.Float(
         string="Available Credit",
         digits=0,
-        readonly=True,
     )
     credit_line_ids = fields.Many2many(
-        comodel_name="account.bank.statement.line",
+        comodel_name="pos.payment",
         string="Credit History",
         compute="_compute_credit_line",
     )
 
     def _compute_credit_line(self):
-        credit_journals = (
-            self.env["account.journal"].sudo().search([("is_credit", "=", True)])
-        )
         for partner in self:
-            lines = ABSLine = self.env["account.bank.statement.line"]
-            if credit_journals:
-                args = [
-                    ("partner_id", "=", partner.id),
-                    ("journal_id", "in", credit_journals.ids),
-                ]
-                lines = ABSLine.sudo().search(args)
-            partner.credit_line_ids = lines
+            pos_payments = (
+                self.env["pos.payment"]
+                .sudo()
+                .search(
+                    [
+                        ("partner_id", "in", partner.ids),
+                        ("payment_method_id.is_credit", "=", True),
+                    ],
+                    order="payment_date desc",
+                )
+            )
+            partner.credit_line_ids = pos_payments
+
+    @api.model
+    def _load_pos_data_fields(self, config_id):
+        res = super()._load_pos_data_fields(config_id)
+        res += ["credit_amount"]
+        return res

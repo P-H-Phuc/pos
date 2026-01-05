@@ -5,23 +5,26 @@
 
 {
     "name": "Point of Sale Payment Credit",
-    "version": "12.0.1.0.2",
+    "version": "18.0.1.0.0",
     "category": "Point Of Sale",
-    "author": "Trobz",
+    "author": "Trobz, Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/pos",
     "license": "AGPL-3",
     "depends": [
         "point_of_sale",
     ],
     "data": [
-        "data/account_journal_data.xml",
-        "views/assets.xml",
-        "views/account_journal_view.xml",
+        "data/payment_method_data.xml",
+        "views/payment_method_view.xml",
         "views/res_partner_view.xml",
-        "views/pos_config.xml",
+        "views/res_config_settings_view.xml",
         "wizard/pos_make_payment_view.xml",
     ],
-    "qweb": [
-        "static/src/xml/pos.xml",
-    ],
+    "assets": {
+        "point_of_sale._assets_pos": [
+            "pos_payment_credit/static/src/app/*",
+            "pos_payment_credit/static/src/overrides/**/*",
+        ],
+    },
     "installable": True,
 }

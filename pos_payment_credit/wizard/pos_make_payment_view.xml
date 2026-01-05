@@ -6,11 +6,8 @@
         <field name="model">pos.make.payment</field>
         <field name="inherit_id" ref="point_of_sale.view_pos_payment" />
         <field name="arch" type="xml">
-            <field name="journal_id" position="after">
-                <field
-                    name="is_credit"
-                    attrs="{'invisible': [('is_credit', '=', False)]}"
-                />
+            <field name="payment_method_id" position="after">
+                <field name="is_credit" invisible="not is_credit" />
             </field>
         </field>
     </record>
