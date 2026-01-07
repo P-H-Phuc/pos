@@ -52,7 +52,14 @@ const TareProductScreen = (ProductScreen_) =>
         _setTareOnLastOrderLine(tare, updateNetWeight = false) {
             if (tare > 0) {
                 const orderline = this.currentOrder.get_last_orderline();
-                orderline.set_tare(tare, updateNetWeight);
+                try {
+                    orderline.set_tare(tare, updateNetWeight);
+                } catch (error) {
+                    this.showPopup("ErrorPopup", {
+                        title: this.env._t("Error Computing Weight"),
+                        body: error.message,
+                    });
+                }
             }
         }
 

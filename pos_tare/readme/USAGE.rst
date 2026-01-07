@@ -20,3 +20,6 @@ The ``pos_self_service_weighing_tare`` module allows to weigh containers and cre
 You can define a default tare on the product form view, if you always use the same type of packaging (or container) for a given product.
 
 .. figure:: ../static/description/product_template.png
+
+.. note::
+   If a product with a different UoM category than the one used for the tare is set to be weighed with a scale, an error message will appear when a tare is set, as the weight cannot be computed.

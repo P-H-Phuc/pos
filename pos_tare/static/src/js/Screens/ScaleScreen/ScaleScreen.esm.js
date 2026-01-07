@@ -57,10 +57,41 @@ const TareScaleScreen = (ScaleScreen_) =>
         async _setWeight() {
             await super._setWeight();
             this.state.gross_weight = this.state.weight;
-            this.updateWeight();
+            try {
+                this._computeWeight();
+            } catch (error) {
+                // Log the error to the console instead of displaying a pop-up
+                // over and over.
+                console.error(
+                    this.env._t("Error Computing Weight") + ": " + error.message
+                );
+            }
         }
 
         updateWeight() {
+            try {
+                this._computeWeight();
+            } catch (error) {
+                this.showPopup("ErrorPopup", {
+                    title: this.env._t("Error Computing Weight"),
+                    body: error.message,
+                });
+            }
+            if (
+                this.env.pos.config.iface_gross_weight_method === "manual" &&
+                this.state.tare <= 0 &&
+                this.state.gross_weight_input_valid
+            ) {
+                // If the weight input method is manual and no tare is set,
+                // the weight will not be set (because _setWeight() is not
+                // called, and the weight is not computed in _computeWeight()
+                // when no tare is set to avoid a possible error). Therefore
+                // it needs to be set here.
+                this.state.weight = parseFloat(this.state.gross_weight);
+            }
+        }
+
+        _computeWeight() {
             this.state.gross_weight_input_valid = !isNaN(this.state.gross_weight);
             this.state.tare_input_valid = !isNaN(this.state.tare);
             if (!this.state.gross_weight_input_valid || !this.state.tare_input_valid) {
@@ -71,14 +102,21 @@ const TareScaleScreen = (ScaleScreen_) =>
                 this.state.weight = NaN;
                 return;
             }
-            const tare_uom_id = this.env.pos.config.iface_tare_uom_id[0];
-            const tare_uom = this.env.pos.units_by_id[tare_uom_id];
-            const tare_in_product_uom = convert_mass(
-                this.state.tare,
-                tare_uom,
-                this.gross_uom
-            );
-            this.state.weight = this.state.gross_weight - tare_in_product_uom;
+            if (this.state.tare > 0) {
+                // We compute this only if a tare is set to avoid an error in
+                // case the UoM categories don't match. Odoo's default
+                // behavior is to consider that the value returned by the
+                // scale is in the same UoM as the product.
+                const tare_uom_id = this.env.pos.config.iface_tare_uom_id[0];
+                const tare_uom = this.env.pos.units_by_id[tare_uom_id];
+                // This will throw an exception if the UoM categories don't match.
+                const tare_in_product_uom = convert_mass(
+                    this.state.tare,
+                    tare_uom,
+                    this.gross_uom
+                );
+                this.state.weight = this.state.gross_weight - tare_in_product_uom;
+            }
         }
 
         confirm() {

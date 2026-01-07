@@ -72,6 +72,9 @@ You can define a default tare on the product form view, if you always use the sa
 
 .. figure:: https://raw.githubusercontent.com/OCA/pos/16.0/pos_tare/static/description/product_template.png
 
+.. note::
+   If a product with a different UoM category than the one used for the tare is set to be weighed with a scale, an error message will appear when a tare is set, as the weight cannot be computed.
+
 Bug Tracker
 ===========
 

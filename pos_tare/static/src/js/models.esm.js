@@ -62,6 +62,7 @@ const TareOrderline = (Orderline_) =>
             const tare_unit = this.pos.units_by_id[tare_uom];
             const tare = parseFloat(quantity) || 0;
             const line_unit = this.get_unit();
+            // This will throw an exception if the UoM categories don't match.
             const tare_in_product_uom = convert_mass(tare, tare_unit, line_unit);
             if (update_net_weight) {
                 const net_quantity = this.get_quantity() - tare_in_product_uom;
