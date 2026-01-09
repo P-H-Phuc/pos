@@ -14,8 +14,8 @@ WIZARD_PAY_INVOICE_VIEW = "pos_session_pay_invoice.view_cash_pay_invoice_form"
 @odoo.tests.tagged("post_install", "-at_install")
 class TestSessionPayInvoice(TestPointOfSaleCommon):
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         cls.pos_config.cash_control = True
         cls.new_journal = cls.env["account.journal"].create(
@@ -68,14 +68,22 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
             }
         )
         cls.invoice_in.action_post()
+        cls.invoice_out2 = cls.invoice_out.copy()
+        cls.invoice_out2.action_post()
+        payment_register = Form(
+            cls.env["account.payment.register"].with_context(
+                active_model="account.move", active_ids=cls.invoice_out2.ids
+            )
+        )
+        cls.payment = payment_register.save()._create_payments()
         refund_wizard = (
             cls.env["account.move.reversal"]
             .with_context(
-                active_ids=cls.invoice_out.ids,
-                active_id=cls.invoice_out.id,
-                active_model=cls.invoice_out._name,
+                active_ids=cls.invoice_out2.ids,
+                active_id=cls.invoice_out2.id,
+                active_model=cls.invoice_out2._name,
             )
-            .create({"journal_id": cls.invoice_out.journal_id.id})
+            .create({"journal_id": cls.invoice_out2.journal_id.id})
             .reverse_moves()
         )
         cls.refund = cls.env[refund_wizard["res_model"]].browse(refund_wizard["res_id"])
@@ -87,7 +95,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         session = self.pos_config.current_session_id
         self.assertTrue(session.cash_control)
         self.assertTrue(session.cash_journal_id)
-        session.set_cashbox_pos(0, notes="Initial cash")
+        session.set_opening_control(0, notes="Initial cash")
         wizard_context = session.button_show_wizard_pay_in_invoice()["context"]
         cash_in = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_in, view=WIZARD_PAY_INVOICE_VIEW) as form:
@@ -113,7 +121,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         self.assertEqual(self.invoice_out.amount_residual, 100.0)
         self.pos_config._action_to_open_ui()
         session = self.pos_config.current_session_id
-        session.set_cashbox_pos(0, notes="Initial cash")
+        session.set_opening_control(0, notes="Initial cash")
         wizard_context = session.button_show_wizard_pay_out_invoice()["context"]
         cash_out = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_out, view=WIZARD_PAY_INVOICE_VIEW) as form:
@@ -136,7 +144,7 @@ class TestSessionPayInvoice(TestPointOfSaleCommon):
         self.assertEqual(self.refund.amount_residual, 100.0)
         self.pos_config._action_to_open_ui()
         session = self.pos_config.current_session_id
-        session.set_cashbox_pos(0, notes="Initial cash")
+        session.set_opening_control(0, notes="Initial cash")
         wizard_context = session.button_show_wizard_pay_out_refund()["context"]
         cash_out = self.env["cash.pay.invoice"].with_context(**wizard_context)
         with Form(cash_out, view=WIZARD_PAY_INVOICE_VIEW) as form:

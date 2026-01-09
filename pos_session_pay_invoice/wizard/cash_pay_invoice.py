@@ -89,13 +89,14 @@ class CashPayInvoice(models.TransientModel):
         pos_order.write({"name": pos_order._compute_order_name()})
         pos_order.add_payment(self._prepare_pos_payment_vals(pos_order))
         pos_order._apply_invoice_payments()
+        pos_order.write({"state": "invoiced"})
 
     def _prepare_pos_order_vals(self):
         return {
             "amount_total": self.amount,
             "partner_id": self.invoice_id.partner_id.id,
             "account_move": self.invoice_id.id,
-            "state": "invoiced",
+            "state": "draft",
             "to_invoice": False,
             "session_id": self.pos_session_id.id,
             "amount_tax": 0,

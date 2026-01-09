@@ -26,7 +26,7 @@
                     name="button_show_wizard_pay_out_refund"
                     type="object"
                     icon="fa-level-up"
-                    attrs="{'invisible':['|',('cash_control', '=', False), ('state', 'not in', ['opened', 'closing_control'])]}"
+                    invisible="not cash_control or state not in ['opened', 'closing_control']"
                 >
                     <div class="o_form_field o_stat_info">
                         <span class="o_stat_text">Pay</span>
@@ -38,7 +38,7 @@
                     name="button_show_wizard_pay_in_invoice"
                     type="object"
                     icon="fa-level-up"
-                    attrs="{'invisible':['|',('cash_control', '=', False), ('state', 'not in', ['opened', 'closing_control'])]}"
+                    invisible="not cash_control or state not in ['opened', 'closing_control']"
                 >
                     <div class="o_form_field o_stat_info">
                         <span class="o_stat_text">Pay Supplier</span>
@@ -50,7 +50,7 @@
                     name="button_show_wizard_pay_out_invoice"
                     type="object"
                     icon="fa-level-down"
-                    attrs="{'invisible':['|',('cash_control', '=', False), ('state', 'not in', ['opened', 'closing_control'])]}"
+                    invisible="not cash_control or state not in ['opened', 'closing_control']"
                 >
                     <div class="o_form_field o_stat_info">
                         <span class="o_stat_text">Get Payment</span>
