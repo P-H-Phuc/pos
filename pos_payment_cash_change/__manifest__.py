@@ -9,7 +9,7 @@
         "point_of_sale",
     ],
     "data": [
-        "views/account_journal_view.xml",
+        "views/pos_payment_method_views.xml",
     ],
     "installable": True,
 }
