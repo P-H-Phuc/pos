@@ -32,6 +32,7 @@ setuptools.setup(
         'odoo-addon-pos_loyalty_exclude>=16.0dev,<16.1dev',
         'odoo-addon-pos_loyalty_redeem_payment>=16.0dev,<16.1dev',
         'odoo-addon-pos_margin>=16.0dev,<16.1dev',
+        'odoo-addon-pos_margin_stored>=16.0dev,<16.1dev',
         'odoo-addon-pos_meal_voucher>=16.0dev,<16.1dev',
         'odoo-addon-pos_membership>=16.0dev,<16.1dev',
         'odoo-addon-pos_membership_extension>=16.0dev,<16.1dev',
