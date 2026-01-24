@@ -94,6 +94,7 @@ addon | version | maintainers | summary
 [pos_receipt_vat_detail](pos_receipt_vat_detail/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Add Vat Details on Receipt (base and vat amounts).
 [pos_report_session_summary](pos_report_session_summary/) | 16.0.1.0.0 |  | Adds a Session Summary PDF report on the POS session
 [pos_reset_search](pos_reset_search/) | 16.0.1.0.0 | <a href='https://github.com/fkawala'><img src='https://github.com/fkawala.png' width='32' height='32' style='border-radius:50%;' alt='fkawala'/></a> | Point of Sale - Clear product search when user clicks on a product.
+[pos_restaurant_receipt_usability](pos_restaurant_receipt_usability/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Improve receipt screen in the PoS Restaurant front office
 [pos_sale_order_print](pos_sale_order_print/) | 16.0.1.0.2 |  | Print multiple sale orders in POS
 [pos_sale_product_config_no_variant](pos_sale_product_config_no_variant/) | 16.0.1.0.1 | <a href='https://github.com/ursais'><img src='https://github.com/ursais.png' width='32' height='32' style='border-radius:50%;' alt='ursais'/></a> | Manage Point Of Sale via Configurator of no variant
 [pos_screen_element_custom_size](pos_screen_element_custom_size/) | 16.0.1.0.0 |  | Set custom size for POS screen elements
