@@ -8,20 +8,20 @@ from odoo import fields, models
 class PosOrderReport(models.Model):
     _inherit = "report.pos.order"
 
-    margin_rate = fields.Float(string="Margin Rate (%)", group_operator="avg")
+    margin_rate = fields.Float(string="Margin Rate (%)", aggregator="avg")
 
     def _select(self):
         return (
             super()._select()
             + """,
-             SUM(
+            (
                 l.price_subtotal - l.total_cost /
                 CASE COALESCE(s.currency_rate, 0)
                     WHEN 0 THEN 1.0
                     ELSE s.currency_rate
                 END
-             ) / NULLIF(SUM(l.price_subtotal), 0) * 100
-             AS margin_rate
+            ) / NULLIF(l.price_subtotal, 0) * 100
+            AS margin_rate
             """
         )
 

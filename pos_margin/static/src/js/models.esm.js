@@ -1,15 +1,17 @@
-/** @odoo-module **/
 // Copyright (C) 2023 - Today: GRAP (http://www.grap.coop)
 // @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
 // License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-import {Order, Orderline} from "@point_of_sale/app/store/models";
+import {Orderline} from "@point_of_sale/app/generic_components/orderline/orderline";
+import {PosOrder} from "@point_of_sale/app/models/pos_order";
+import {PosOrderline} from "@point_of_sale/app/models/pos_order_line";
 import {patch} from "@web/core/utils/patch";
+import {roundCurrency} from "@point_of_sale/app/models/utils/currency";
 
 // /////////////////////////////
-// Overload models.Order
+// Overload models.PosOrder
 // /////////////////////////////
-patch(Order.prototype, {
+patch(PosOrder.prototype, {
     get_margin() {
         return this.get_orderlines().reduce(
             (margin, line) => margin + line.get_margin(),
@@ -22,18 +24,14 @@ patch(Order.prototype, {
     },
 
     get_margin_rate_str() {
-        return this.env.utils.roundCurrency(this.get_margin_rate()) + "%";
+        return roundCurrency(this.get_margin_rate(), this.currency) + "%";
     },
 });
 
 // /////////////////////////////
-// Overload models.OrderLine
+// Overload models.PosOrderline
 // /////////////////////////////
-patch(Orderline.prototype, {
-    setup() {
-        super.setup(...arguments);
-        console.log(this.pos);
-    },
+patch(PosOrderline.prototype, {
     getDisplayData() {
         return {
             ...super.getDisplayData(),
@@ -43,16 +41,15 @@ patch(Orderline.prototype, {
         };
     },
     get_iface_display_margin() {
-        return this.pos.config.iface_display_margin;
+        return this.config.iface_display_margin;
     },
     get_purchase_price() {
         // Overload the function to use another field that the default standard_price
-        return this.product.standard_price;
+        return this.product_id.standard_price;
     },
     get_margin() {
         return (
-            this.get_all_prices().priceWithoutTax -
-            this.quantity * this.get_purchase_price()
+            this.get_all_prices().priceWithoutTax - this.qty * this.get_purchase_price()
         );
     },
     get_margin_rate() {
@@ -60,6 +57,21 @@ patch(Orderline.prototype, {
         return priceWithoutTax ? (this.get_margin() / priceWithoutTax) * 100 : 0;
     },
     get_margin_rate_str() {
-        return this.env.utils.roundCurrency(this.get_margin_rate()) + "%";
+        return roundCurrency(this.get_margin_rate(), this.currency) + "%";
+    },
+});
+
+patch(Orderline, {
+    props: {
+        ...Orderline.props,
+        line: {
+            ...Orderline.props.line,
+            shape: {
+                ...Orderline.props.line.shape,
+                ifaceDisplayMargin: {type: Boolean, optional: true},
+                margin_rate: {type: Number, optional: true},
+                margin_rate_str: {type: String, optional: true},
+            },
+        },
     },
 });
