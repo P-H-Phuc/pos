@@ -7,26 +7,27 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-10 20:27+0000\n"
-"PO-Revision-Date: 2021-06-10 20:27+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2026-02-06 09:55+0000\n"
+"Last-Translator: ferdymercury <fernando.hueso@uv.es>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: pos_tare
 #. openerp-web
 #: code:addons/pos_tare/static/src/xml/pos_tare.xml:36
 #, python-format
 msgid "- Tare:"
-msgstr " - Tare :"
+msgstr "- Tare:"
 
 #. module: pos_tare
 #: selection:barcode.rule,type:0
 msgid "Alias"
-msgstr ""
+msgstr "Alias"
 
 #. module: pos_tare
 #. openerp-web
@@ -54,7 +55,7 @@ msgstr "Fromage à la coupe"
 #. module: pos_tare
 #: selection:barcode.rule,type:0
 msgid "Client"
-msgstr ""
+msgstr "Client"
 
 #. module: pos_tare
 #: model_terms:ir.ui.view,arch_db:pos_tare.view_pos_config_form
@@ -149,7 +150,7 @@ msgstr "Lieu"
 #. module: pos_tare
 #: selection:barcode.rule,type:0
 msgid "Lot"
-msgstr ""
+msgstr "Lot"
 
 #. module: pos_tare
 #: selection:pos.config,iface_tare_method:0
@@ -159,7 +160,7 @@ msgstr "Saisie manuelle et par code barre"
 #. module: pos_tare
 #: selection:barcode.rule,type:0
 msgid "Meal Voucher Payment"
-msgstr ""
+msgstr "Bon (Ticket-resto)"
 
 #. module: pos_tare
 #: selection:barcode.rule,type:0
@@ -205,7 +206,7 @@ msgstr "Article à prix fixe"
 #. module: pos_tare
 #: selection:barcode.rule,type:0
 msgid "Priced Product (Computed Weight)"
-msgstr ""
+msgstr "Produit tarifé (poids calculé)"
 
 #. module: pos_tare
 #: model:ir.model,name:pos_tare.model_product_template
@@ -240,9 +241,9 @@ msgid ""
 "* 'both' : manual input and barcode methods are enabled;"
 msgstr ""
 "Selection la méthode de tare : \n"
-" * 'manuelle' : l'écran de pesée à un nouveau champ de saisie pour la tare;\n"
-" * 'barcode' : scanner un code bare pour tarer la ligne sélectionnée;\n"
-"* 'both : Saisie manuelle ou par code barre"
+"* 'manuelle' : l'écran de pesée à un nouveau champ de saisie pour la tare;\n"
+"* 'code barre' : scanner un code bare pour tarer la ligne sélectionnée;\n"
+"* 'les deux' : Saisie manuelle ou par code barre;"
 
 #. module: pos_tare
 #: model:ir.model.fields,help:pos_tare.field_product_product__tare_weight
@@ -252,7 +253,7 @@ msgid ""
 "substracted when the product is weighted"
 msgstr ""
 "Saisir une valeur de tare par défaut pour ce produit. Cette tare sera "
-"soustraite quand le produit est pesée."
+"soustraite quand le produit est pesée"
 
 #. module: pos_tare
 #. openerp-web
@@ -262,14 +263,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:pos_tare.field_pos_order_line__tare
 #, python-format
 msgid "Tare"
-msgstr ""
+msgstr "Tare"
 
 #. module: pos_tare
 #. openerp-web
 #: code:addons/pos_tare/static/src/xml/pos_tare.xml:50
 #, python-format
 msgid "Tare :"
-msgstr ""
+msgstr "Tare :"
 
 #. module: pos_tare
 #: model:ir.model.fields,field_description:pos_tare.field_pos_config__iface_tare_method
@@ -301,7 +302,7 @@ msgstr ""
 #. module: pos_tare
 #: model:ir.model.fields,field_description:pos_tare.field_barcode_rule__type
 msgid "Type"
-msgstr ""
+msgstr "Genre"
 
 #. module: pos_tare
 #: selection:barcode.rule,type:0
@@ -361,4 +362,4 @@ msgstr ""
 #: model:product.template,uom_name:pos_tare.cheese_product_template
 #: model:product.template,weight_uom_name:pos_tare.cheese_product_template
 msgid "kg"
-msgstr ""
+msgstr "kg"
