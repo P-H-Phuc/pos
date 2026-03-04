@@ -12,14 +12,16 @@
     "website": "https://github.com/OCA/pos",
     "license": "AGPL-3",
     "depends": ["point_of_sale"],
-    "data": [],
+    "data": [
+        "views/res_config_settings_view.xml",
+    ],
     "demo": [
         "demo/barcode_rule.xml",
         "demo/product_product.xml",
     ],
     "assets": {
         "point_of_sale.assets": [
-            "pos_price_to_weight/static/src/js/ProductScreen.js",
+            "pos_price_to_weight/static/src/js/*.js",
         ],
     },
     "installable": True,
