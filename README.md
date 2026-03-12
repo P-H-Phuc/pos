@@ -22,10 +22,10 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [pos_barcode_rule_priced_with_change_rate](pos_barcode_rule_priced_with_change_rate/) | 18.0.1.0.0 |  | Add a barcode rule to be able to scan a barcode with price encoded (as the standard "Priced Product" rule), and convert the price according to a given change rate.
-[pos_display_order_number](pos_display_order_number/) | 18.0.1.0.0 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Display order number in order summary
-[pos_display_total_quantity](pos_display_total_quantity/) | 18.0.1.0.0 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Display total quantity in order summary
-[pos_divide_order_summary](pos_divide_order_summary/) | 18.0.1.0.0 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Divider order summary
-[pos_lot_barcode](pos_lot_barcode/) | 18.0.1.0.0 |  | Scan barcode to enter lot/serial numbers
+[pos_display_order_number](pos_display_order_number/) | 18.0.1.0.1 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Display order number in order summary
+[pos_display_total_quantity](pos_display_total_quantity/) | 18.0.1.0.1 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Display total quantity in order summary
+[pos_divide_order_summary](pos_divide_order_summary/) | 18.0.1.0.1 | <a href='https://github.com/henrybackman'><img src='https://github.com/henrybackman.png' width='32' height='32' style='border-radius:50%;' alt='henrybackman'/></a> | POS - Divider order summary
+[pos_lot_barcode](pos_lot_barcode/) | 18.0.1.0.1 |  | Scan barcode to enter lot/serial numbers
 
 [//]: # (end addons)
 
