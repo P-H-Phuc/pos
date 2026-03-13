@@ -1,12 +1,10 @@
-/** @odoo-module */
-
-import {PosDB} from "@point_of_sale/app/store/db";
+import {ProductProduct} from "@point_of_sale/app/models/product_product";
 import {patch} from "@web/core/utils/patch";
 
-patch(PosDB.prototype, {
-    _product_search_string(product) {
-        var res = super._product_search_string(product).replace("\n", "");
-        var supplier_data_list = JSON.parse(product.supplier_data_json);
+patch(ProductProduct.prototype, {
+    get searchString() {
+        let res = super.searchString;
+        const supplier_data_list = JSON.parse(this.supplier_data_json || "[]");
         for (var i = 0, len = supplier_data_list.length; i < len; i++) {
             var supplier_data = supplier_data_list[i];
             if (supplier_data.supplier_name) {
@@ -19,7 +17,6 @@ patch(PosDB.prototype, {
                 res += "|" + supplier_data.supplier_product_name.replace(/:/g, "");
             }
         }
-        res += "\n";
         return res;
     },
 });

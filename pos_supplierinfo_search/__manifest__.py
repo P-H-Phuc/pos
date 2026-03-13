@@ -3,7 +3,7 @@
 {
     "name": "Point of sale - Search products by supplier",
     "summary": "Search products by supplier data",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "development_status": "Beta",
     "category": "Point Of Sale",
     "website": "https://github.com/OCA/pos",
@@ -18,7 +18,7 @@
     ],
     "assets": {
         "point_of_sale._assets_pos": [
-            "/pos_supplierinfo_search/static/src/js/db.esm.js",
+            "/pos_supplierinfo_search/static/src/js/product_product.esm.js",
         ],
     },
 }

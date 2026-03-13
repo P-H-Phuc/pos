@@ -1,10 +1,10 @@
 import json
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
-class ProductTemplate(models.Model):
-    _inherit = "product.template"
+class ProductProduct(models.Model):
+    _inherit = "product.product"
 
     supplier_data_json = fields.Char(
         "Supplier data dict",
@@ -21,6 +21,12 @@ class ProductTemplate(models.Model):
                         "supplier_product_code": s.product_code or "",
                         "supplier_product_name": s.product_name or "",
                     }
-                    for s in rec.seller_ids
+                    for s in rec.product_tmpl_id.seller_ids
                 ]
             )
+
+    @api.model
+    def _load_pos_data_fields(self, config_id):
+        res = super()._load_pos_data_fields(config_id)
+        res.append("supplier_data_json")
+        return res
