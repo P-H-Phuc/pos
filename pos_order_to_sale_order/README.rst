@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 =======================
 PoS Order To Sale Order
 =======================
@@ -17,7 +13,7 @@ PoS Order To Sale Order
 .. |badge1| image:: https://img.shields.io/badge/maturity-Production%2FStable-green.png
     :target: https://odoo-community.org/page/development-status
     :alt: Production/Stable
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fpos-lightgray.png?logo=github
@@ -59,7 +55,7 @@ Configuration
 - Check the box 'Create Sale Orders'
 - Select the desired default behaviour
 
-|image_setting|
+New feature: **Print Sale Order PDF after creation** |image_setting|
 
 .. |image_setting| image:: https://raw.githubusercontent.com/OCA/pos/18.0/pos_order_to_sale_order/static/description/res_config_settings_form.png
 
