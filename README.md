@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [pos_margin](pos_margin/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Margin on PoS Order
 [pos_order_remove_line](pos_order_remove_line/) | 18.0.1.0.0 | <a href='https://github.com/robyf70'><img src='https://github.com/robyf70.png' width='32' height='32' style='border-radius:50%;' alt='robyf70'/></a> | Add button to remove POS order line.
 [pos_order_to_sale_order](pos_order_to_sale_order/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | PoS Order To Sale Order
-[pos_payment_method_cashdro](pos_payment_method_cashdro/) | 18.0.1.0.0 |  | Allows to pay with CashDro Terminals on the Point of Sale
+[pos_payment_method_cashdro](pos_payment_method_cashdro/) | 18.0.1.0.1 |  | Allows to pay with CashDro Terminals on the Point of Sale
 [pos_product_display_default_code](pos_product_display_default_code/) | 18.0.1.0.0 |  | pos: display product default code before product name
 [pos_product_multi_barcode](pos_product_multi_barcode/) | 18.0.1.0.0 |  | Make product multi barcodes usable in the point of sale
 [pos_report_session_summary](pos_report_session_summary/) | 18.0.1.0.0 |  | Adds a Session Summary PDF report on the POS session
