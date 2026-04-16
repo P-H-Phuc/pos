@@ -23,8 +23,7 @@ msgstr "Impostazioni configurazione"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_popup/create_order_popup.xml:0
 msgid "Create Confirmed Sale Order"
 msgstr "Crea ordine di vendita confermato"
 
@@ -37,8 +36,7 @@ msgstr "Crea ordini di vendita confermati"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_popup/create_order_popup.xml:0
 msgid "Create Delivered Sale Order"
 msgstr "Crea ordine vendita consegnato"
 
@@ -51,8 +49,7 @@ msgstr "Crea ordini di vendita consegnati"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_popup/create_order_popup.xml:0
 msgid "Create Draft Sale Order"
 msgstr "Crea bozza ordine di vendita"
 
@@ -65,8 +62,7 @@ msgstr "Crea bozze ordini di vendita"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_popup/create_order_popup.xml:0
 msgid "Create Invoiced Sale Order"
 msgstr "Crea ordine di vendita fatturato"
 
@@ -79,15 +75,13 @@ msgstr "Crea ordini di vendita fatturati"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderButton.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_button/create_order_button.xml:0
 msgid "Create Order"
 msgstr "Crea ordine"
 
 #. module: pos_order_to_sale_order
 #. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
+#: code:addons/pos_order_to_sale_order/static/src/components/create_order_popup/create_order_popup.xml:0
 msgid "Create Sale Order"
 msgstr "Crea ordine di vendita"
 
@@ -95,13 +89,6 @@ msgstr "Crea ordine di vendita"
 #: model:ir.model.fields,field_description:pos_order_to_sale_order.field_pos_config__iface_create_sale_order
 msgid "Create Sale Orders"
 msgstr "Crea ordini di vendita"
-
-#. module: pos_order_to_sale_order
-#. odoo-javascript
-#: code:addons/pos_order_to_sale_order/static/src/xml/CreateOrderPopup.xml:0
-#, python-format
-msgid "Discard"
-msgstr "Abbandona"
 
 #. module: pos_order_to_sale_order
 #: model:ir.model.fields,help:pos_order_to_sale_order.field_pos_config__iface_create_confirmed_sale_order
@@ -154,9 +141,16 @@ msgstr ""
 "di vendita, in base alla bozza attuale di ordine PoS."
 
 #. module: pos_order_to_sale_order
+#: model:ir.model.fields,help:pos_order_to_sale_order.field_pos_config__iface_print_sale_order_pdf
+#: model:ir.model.fields,help:pos_order_to_sale_order.field_res_config_settings__pos_iface_print_sale_order_pdf
+msgid ""
+"If checked, the cashier will print the Sale Order PDF after creating a Sale "
+"Order from the current draft PoS Order."
+msgstr ""
+
+#. module: pos_order_to_sale_order
 #. odoo-python
 #: code:addons/pos_order_to_sale_order/models/sale_order.py:0
-#, python-format
 msgid "Point of Sale %s"
 msgstr "Punto vendita %s"
 
@@ -164,6 +158,18 @@ msgstr "Punto vendita %s"
 #: model:ir.model,name:pos_order_to_sale_order.model_pos_config
 msgid "Point of Sale Configuration"
 msgstr "Configurazione punto vendita"
+
+#. module: pos_order_to_sale_order
+#: model:ir.model.fields,field_description:pos_order_to_sale_order.field_sale_order__pos_session_id
+msgid "Pos Session"
+msgstr ""
+
+#. module: pos_order_to_sale_order
+#: model:ir.model.fields,field_description:pos_order_to_sale_order.field_pos_config__iface_print_sale_order_pdf
+#: model:ir.model.fields,field_description:pos_order_to_sale_order.field_res_config_settings__pos_iface_print_sale_order_pdf
+#: model_terms:ir.ui.view,arch_db:pos_order_to_sale_order.view_res_config_settings_form
+msgid "Print Sale Order PDF after creation"
+msgstr ""
 
 #. module: pos_order_to_sale_order
 #: model_terms:ir.ui.view,arch_db:pos_order_to_sale_order.view_res_config_settings_form
@@ -179,3 +185,7 @@ msgstr "Ordine di vendita"
 #: model:ir.model,name:pos_order_to_sale_order.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Riga ordine di vendita"
+
+#, python-format
+#~ msgid "Discard"
+#~ msgstr "Abbandona"

@@ -21,6 +21,10 @@
                     <setting string="Create Invoiced Sale Orders">
                         <field name="pos_iface_create_invoiced_sale_order" />
                     </setting>
+
+                    <setting string="Print Sale Order PDF after creation">
+                        <field name="pos_iface_print_sale_order_pdf" />
+                    </setting>
                 </block>
             </xpath>
         </field>

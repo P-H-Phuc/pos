@@ -23,3 +23,7 @@ class ResConfigSettings(models.TransientModel):
     pos_iface_create_invoiced_sale_order = fields.Boolean(
         related="pos_config_id.iface_create_invoiced_sale_order", readonly=False
     )
+
+    pos_iface_print_sale_order_pdf = fields.Boolean(
+        related="pos_config_id.iface_print_sale_order_pdf", readonly=False
+    )
