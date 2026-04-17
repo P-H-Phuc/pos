@@ -47,6 +47,13 @@ class PosConfig(models.Model):
         " Only invoice payment process will be possible.",
     )
 
+    iface_print_sale_order_pdf = fields.Boolean(
+        string="Print Sale Order PDF after creation",
+        default=False,
+        help="If checked, the cashier will print the Sale Order PDF"
+        " after creating a Sale Order from the current draft PoS Order.",
+    )
+
     @api.depends(
         "iface_create_draft_sale_order",
         "iface_create_confirmed_sale_order",

@@ -1,8 +1,7 @@
-import {useService} from "@web/core/utils/hooks";
-
+import {Component} from "@odoo/owl";
 import {Dialog} from "@web/core/dialog/dialog";
 import {usePos} from "@point_of_sale/app/store/pos_hook";
-import {Component} from "@odoo/owl";
+import {useService} from "@web/core/utils/hooks";
 
 export class CreateOrderPopup extends Component {
     static template = "pos_order_to_sale_order.CreateOrderPopup";
@@ -14,6 +13,7 @@ export class CreateOrderPopup extends Component {
         this.pos = usePos();
         this.ui = useService("ui");
         this.orm = useService("orm");
+        this.action = useService("action");
     }
 
     async createDraftSaleOrder() {
@@ -34,7 +34,10 @@ export class CreateOrderPopup extends Component {
 
     async _actionCreateSaleOrder(order_state) {
         // Create Sale Order
-        await this._createSaleOrder(order_state);
+        const sale_order = await this._createSaleOrder(order_state);
+        if (this.pos.config.iface_print_sale_order_pdf) {
+            await this._printSaleOrder(sale_order.sale_order_id);
+        }
 
         // Delete current order
         const current_order = this.pos.get_order();
@@ -60,5 +63,18 @@ export class CreateOrderPopup extends Component {
             .finally(() => {
                 this.ui.unblock();
             });
+    }
+
+    async _printSaleOrder(sale_order_id) {
+        const url = await this.orm.call("sale.order", "get_portal_url", [
+            sale_order_id,
+            null,
+            "pdf",
+            true,
+        ]);
+        return await this.action.doAction({
+            type: "ir.actions.act_url",
+            url: url,
+        });
     }
 }
