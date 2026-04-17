@@ -122,6 +122,14 @@ msgid ""
 msgstr ""
 
 #. module: pos_order_to_sale_order
+#: model:ir.model.fields,help:pos_order_to_sale_order.field_pos_config__iface_print_sale_order_pdf
+#: model:ir.model.fields,help:pos_order_to_sale_order.field_res_config_settings__pos_iface_print_sale_order_pdf
+msgid ""
+"If checked, the cashier will print the Sale Order PDF after creating a Sale "
+"Order from the current draft PoS Order."
+msgstr ""
+
+#. module: pos_order_to_sale_order
 #. odoo-python
 #: code:addons/pos_order_to_sale_order/models/sale_order.py:0
 msgid "Point of Sale %s"
@@ -135,6 +143,13 @@ msgstr ""
 #. module: pos_order_to_sale_order
 #: model:ir.model.fields,field_description:pos_order_to_sale_order.field_sale_order__pos_session_id
 msgid "Pos Session"
+msgstr ""
+
+#. module: pos_order_to_sale_order
+#: model:ir.model.fields,field_description:pos_order_to_sale_order.field_pos_config__iface_print_sale_order_pdf
+#: model:ir.model.fields,field_description:pos_order_to_sale_order.field_res_config_settings__pos_iface_print_sale_order_pdf
+#: model_terms:ir.ui.view,arch_db:pos_order_to_sale_order.view_res_config_settings_form
+msgid "Print Sale Order PDF after creation"
 msgstr ""
 
 #. module: pos_order_to_sale_order
