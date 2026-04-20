@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-25 08:06+0000\n"
+"PO-Revision-Date: 2026-04-20 14:49+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: pos_order_to_sale_order
 #: model:ir.model,name:pos_order_to_sale_order.model_res_config_settings
@@ -147,6 +147,8 @@ msgid ""
 "If checked, the cashier will print the Sale Order PDF after creating a Sale "
 "Order from the current draft PoS Order."
 msgstr ""
+"Se selezionata, il cassiere stamperà il PDF dell'ordine di vendita dopo la "
+"creazione dell'ordine di vendita dall'attuale bozza ordine POS."
 
 #. module: pos_order_to_sale_order
 #. odoo-python
@@ -162,14 +164,14 @@ msgstr "Configurazione punto vendita"
 #. module: pos_order_to_sale_order
 #: model:ir.model.fields,field_description:pos_order_to_sale_order.field_sale_order__pos_session_id
 msgid "Pos Session"
-msgstr ""
+msgstr "Sessione POS"
 
 #. module: pos_order_to_sale_order
 #: model:ir.model.fields,field_description:pos_order_to_sale_order.field_pos_config__iface_print_sale_order_pdf
 #: model:ir.model.fields,field_description:pos_order_to_sale_order.field_res_config_settings__pos_iface_print_sale_order_pdf
 #: model_terms:ir.ui.view,arch_db:pos_order_to_sale_order.view_res_config_settings_form
 msgid "Print Sale Order PDF after creation"
-msgstr ""
+msgstr "Stampa il PDF ordine di vendita dopo la creazione"
 
 #. module: pos_order_to_sale_order
 #: model_terms:ir.ui.view,arch_db:pos_order_to_sale_order.view_res_config_settings_form
