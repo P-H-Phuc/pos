@@ -39,7 +39,7 @@ addon | version | maintainers | summary
 [pos_product_display_default_code](pos_product_display_default_code/) | 18.0.1.0.1 |  | pos: display product default code before product name
 [pos_product_multi_barcode](pos_product_multi_barcode/) | 18.0.1.0.0 |  | Make product multi barcodes usable in the point of sale
 [pos_report_session_summary](pos_report_session_summary/) | 18.0.1.0.0 |  | Adds a Session Summary PDF report on the POS session
-[pos_sale_picking_keep](pos_sale_picking_keep/) | 18.0.1.0.1 | <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Keep sale pickings from PoS
+[pos_sale_picking_keep](pos_sale_picking_keep/) | 18.0.1.0.2 | <a href='https://github.com/pedrobaeza'><img src='https://github.com/pedrobaeza.png' width='32' height='32' style='border-radius:50%;' alt='pedrobaeza'/></a> | Keep sale pickings from PoS
 [pos_session_pay_invoice](pos_session_pay_invoice/) | 18.0.1.0.0 |  | Pay and receive invoices from PoS Session
 [pos_supplierinfo_search](pos_supplierinfo_search/) | 18.0.1.0.0 | <a href='https://github.com/eLBati'><img src='https://github.com/eLBati.png' width='32' height='32' style='border-radius:50%;' alt='eLBati'/></a> | Search products by supplier data
 [pos_user_restrict_provider_info](pos_user_restrict_provider_info/) | 18.0.1.0.0 | <a href='https://github.com/BernatObrador'><img src='https://github.com/BernatObrador.png' width='32' height='32' style='border-radius:50%;' alt='BernatObrador'/></a> | Restrict provider info to pos users
