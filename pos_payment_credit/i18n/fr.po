@@ -1,0 +1,204 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_payment_credit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-04 09:27+0000\n"
+"PO-Revision-Date: 2026-02-04 09:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid " will be applied."
+msgstr " sera appliqué."
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid " will be used."
+msgstr "sera utilisé"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "A refund of "
+msgstr "Un avoir de "
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_pos_make_payment__is_credit
+msgid "Allow to add credit for members"
+msgstr "Permettre d'allouer un crédit aux membres"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_pos_config__auto_apply_credit_amount
+#: model:ir.model.fields,field_description:pos_payment_credit.field_res_config_settings__pos_auto_apply_credit_amount
+msgid "Automatic Pay by Credit Amount"
+msgstr "Paiement automatique par montant de crédit"
+
+#. module: pos_payment_credit
+#: model_terms:ir.ui.view,arch_db:pos_payment_credit.res_config_settings_view_form
+msgid "Automatically Apply Credit Amount"
+msgstr "Appliquer automatiquement le montant du crédit"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/xml/pos.xml:0
+#: model:ir.model.fields,field_description:pos_payment_credit.field_res_partner__credit_amount
+#: model:ir.model.fields,field_description:pos_payment_credit.field_res_users__credit_amount
+msgid "Available Credit"
+msgstr "Crédit disponible"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Ligne de relevé bancaire"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "Confirming"
+msgstr "Confirmer"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/xml/pos.xml:0
+#: model:pos.payment.method,name:pos_payment_credit.credit_payment_method
+#: model_terms:ir.ui.view,arch_db:pos_payment_credit.view_partner_property_form_inherit
+msgid "Credit"
+msgstr "Crédit"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_res_partner__credit_line_ids
+#: model:ir.model.fields,field_description:pos_payment_credit.field_res_users__credit_line_ids
+#: model_terms:ir.ui.view,arch_db:pos_payment_credit.view_partner_property_form_inherit
+msgid "Credit History"
+msgstr "Historique de crédit"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_account_bank_statement_line__credit_payment
+msgid "Credit Payment"
+msgstr "Paiement à crédit"
+
+#. module: pos_payment_credit
+#. odoo-python
+#: code:addons/pos_payment_credit/models/pos_order.py:0
+msgid "Customer not found."
+msgstr "Client introuvable"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "Error"
+msgstr "Erreur"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "Error validating credit amount"
+msgstr "Erreur lors de la validation du montant du crédit"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_pos_session__has_credit_payment
+msgid "Has Credit Payment"
+msgstr "Paiement à crédit existant"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,help:pos_payment_credit.field_account_bank_statement_line__credit_payment
+msgid "Indicates that this payment was made using customer's credit amount."
+msgstr "Indique que le paiement a été effectué avec le crédit du client."
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_pos_payment_method__is_credit
+msgid "Is Credit"
+msgstr "Permettre d'allouer un crédit aux membres"
+
+#. module: pos_payment_credit
+#: model:ir.model.fields,field_description:pos_payment_credit.field_account_bank_statement_line__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "Pay using the member's available credit?"
+msgstr "Payer en utilisant le crédit disponible du membre?"
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "Please select the Customer"
+msgstr "Veuillez sélectionner le client"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuration du point de vente"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_pos_make_payment
+msgid "Point of Sale Make Payment Wizard"
+msgstr "Assistant de paiement du point de vente"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Commandes du point de vente"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Modes de paiement du point de vente"
+
+#. module: pos_payment_credit
+#: model:ir.model,name:pos_payment_credit.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Session du point de vente"
+
+#. module: pos_payment_credit
+#. odoo-python
+#: code:addons/pos_payment_credit/models/pos_order.py:0
+msgid "The Credit amount is invalid."
+msgstr "Le montant du crédit est invalide."
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "The credit amount is invalid. Maximum value: "
+msgstr "Le montant du crédit est invalide. Valeur maximale: "
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "The credit of "
+msgstr "Le crédit de "
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "There is already a credit payment in progress."
+msgstr "Un paiement à crédit est déjà en cours."
+
+#. module: pos_payment_credit
+#. odoo-javascript
+#: code:addons/pos_payment_credit/static/src/js/screen.esm.js:0
+msgid "You need to select a customer first."
+msgstr "Vous devez d’abord sélectionner un client."
