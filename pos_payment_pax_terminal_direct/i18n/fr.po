@@ -1,0 +1,457 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_payment_pax_terminal_direct
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-20 03:14+0000\n"
+"PO-Revision-Date: 2026-07-20 03:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid " (${code})"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-python
+#: code:addons/pos_payment_pax_terminal_direct/models/pos_payment_method.py:0
+msgid ""
+"A PAX Terminal must be selected when using the PAX payment terminal "
+"integration."
+msgstr ""
+"Un terminal PAX doit être sélectionné lors de l'utilisation de l'intégration"
+" du terminal de paiement PAX."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__amount
+msgid "Amount"
+msgstr "Montant"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pax_transaction_log__transaction_type__05
+msgid "Auth"
+msgstr "Autorisation"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__auth_code
+msgid "Auth Code"
+msgstr "Code d'autorisation"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pos_payment_method__pax_transaction_type__05
+msgid "Auth Only"
+msgstr "Autorisation uniquement"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "Cannot process a transaction with a non-positive amount."
+msgstr "Impossible de traiter une transaction avec un montant non positif."
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-python
+#: code:addons/pos_payment_pax_terminal_direct/models/pax_terminal.py:0
+msgid "Cannot reach terminal '%(name)s': %(error)s"
+msgstr "Impossible de joindre le terminal « %(name)s » : %(error)s"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_form
+msgid "Card / Auth"
+msgstr "Carte / Autorisation"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__last_four
+msgid "Card Last Four Digits"
+msgstr "Quatre derniers chiffres de la carte"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__card_type
+msgid "Card Type"
+msgstr "Type de carte"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "Connection"
+msgstr "Connexion"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-python
+#: code:addons/pos_payment_pax_terminal_direct/models/pax_terminal.py:0
+msgid "Connection OK"
+msgstr "Connexion OK"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__create_uid
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__create_date
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_transaction_type
+msgid "Default Transaction Type"
+msgstr "Type de transaction par défaut"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__demo_mode
+msgid "Demo Mode"
+msgstr "Mode démo"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "Demo Mode is active — no real terminal will be contacted."
+msgstr "Le mode démo est actif — aucun terminal réel ne sera contacté."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__display_name
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pax_terminal__use_https
+msgid "Enable when the terminal is configured for TLS connections."
+msgstr "Activer lorsque le terminal est configuré pour les connexions TLS."
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "General"
+msgstr "Général"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__id
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__id
+msgid "ID"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-python
+#: code:addons/pos_payment_pax_terminal_direct/models/pax_terminal.py:0
+msgid ""
+"IP Address should contain only the host/IP, not a URL scheme.\n"
+"Enter '%(clean)s' instead of '%(raw)s'."
+msgstr ""
+"L'adresse IP ne doit contenir que l'hôte/IP, sans schéma d'URL.\n"
+"Saisissez « %(clean)s » au lieu de « %(raw)s »."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pax_terminal__ip_address
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_terminal_ip
+msgid "IP address only — do not include http:// (e.g. 192.168.1.100)"
+msgstr "Adresse IP uniquement — ne pas inclure http:// (ex. 192.168.1.100)"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__ip_address
+msgid "Ip Address"
+msgstr "Adresse IP"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__write_uid
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__write_date
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_form
+msgid "Links"
+msgstr "Liens"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pax_terminal__timeout
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_timeout
+msgid "Maximum time (milliseconds) to wait for a terminal response."
+msgstr ""
+"Durée maximale (en millisecondes) d'attente d'une réponse du terminal."
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "Network error contacting the payment server."
+msgstr "Erreur réseau lors du contact avec le serveur de paiement."
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "No PAX terminal is configured for this payment method."
+msgstr "Aucun terminal PAX n'est configuré pour ce mode de paiement."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model,name:pos_payment_pax_terminal_direct.model_pax_terminal
+msgid "PAX Payment Terminal"
+msgstr "Terminal de paiement PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_terminal_id
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "PAX Terminal"
+msgstr "Terminal PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "PAX Terminal Error"
+msgstr "Erreur du terminal PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model,name:pos_payment_pax_terminal_direct.model_pax_transaction_log
+msgid "PAX Terminal Transaction Log"
+msgstr "Journal des transactions du terminal PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.actions.act_window,name:pos_payment_pax_terminal_direct.action_pax_terminal
+#: model:ir.ui.menu,name:pos_payment_pax_terminal_direct.menu_pax_root
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_list
+msgid "PAX Terminals"
+msgstr "Terminaux PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_form
+msgid "PAX Transaction Log"
+msgstr "Journal des transactions PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.actions.act_window,name:pos_payment_pax_terminal_direct.action_pax_transaction_log
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_list
+msgid "PAX Transactions"
+msgstr "Transactions PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-python
+#: code:addons/pos_payment_pax_terminal_direct/models/pax_terminal.py:0
+msgid "PAX terminal '%(name)s' responded successfully."
+msgstr "Le terminal PAX « %(name)s » a répondu avec succès."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_terminal_id
+msgid "PAX terminal device to use for this payment method."
+msgstr "Terminal PAX à utiliser pour ce mode de paiement."
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "POS Configurations"
+msgstr "Configurations du point de vente"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__pos_order_id
+msgid "POS Order"
+msgstr "Commande PDV"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__pos_payment_id
+msgid "POS Payment"
+msgstr "Paiement PDV"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pax_terminal__pos_config_ids
+msgid "POS sessions that can use this terminal."
+msgstr "Sessions PDV pouvant utiliser ce terminal."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__payment_method_ids
+msgid "Payment Method"
+msgstr "Mode de paiement"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "Payment Methods"
+msgstr "Modes de paiement"
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "Payment declined"
+msgstr "Paiement refusé"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model,name:pos_payment_pax_terminal_direct.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "Modes de paiement du point de vente"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model,name:pos_payment_pax_terminal_direct.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Session du point de vente"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__port
+msgid "Port"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__pos_config_ids
+msgid "Pos Config"
+msgstr "Configuration PDV"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pax_transaction_log__transaction_type__06
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pos_payment_method__pax_transaction_type__06
+msgid "Post-Auth"
+msgstr "Post-autorisation"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__raw_response
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_form
+msgid "Raw Response"
+msgstr "Réponse brute"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__reference
+msgid "Reference"
+msgstr "Référence"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__result_code
+msgid "Result Code"
+msgstr "Code de résultat"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__result_message
+msgid "Result Message"
+msgstr "Message de résultat"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pax_transaction_log__transaction_type__02
+msgid "Return"
+msgstr "Retour"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pos_payment_method__pax_transaction_type__02
+msgid "Return/Refund"
+msgstr "Retour/Remboursement"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pax_transaction_log__transaction_type__01
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pos_payment_method__pax_transaction_type__01
+msgid "Sale"
+msgstr "Vente"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,help:pos_payment_pax_terminal_direct.field_pax_terminal__demo_mode
+msgid "Simulate transactions without contacting a real terminal."
+msgstr "Simuler des transactions sans contacter un terminal réel."
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__success
+msgid "Successful"
+msgstr "Réussi"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__terminal_id
+msgid "Terminal"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_terminal_ip
+msgid "Terminal IP"
+msgstr "IP du terminal"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__name
+msgid "Terminal Name"
+msgstr "Nom du terminal"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_terminal_port
+msgid "Terminal Port"
+msgstr "Port du terminal"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__transaction_id
+msgid "Terminal Transaction ID"
+msgstr "ID de transaction du terminal"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.ui.menu,name:pos_payment_pax_terminal_direct.menu_pax_terminals
+msgid "Terminals"
+msgstr "Terminaux"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "Test Connection"
+msgstr "Tester la connexion"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pos_payment_method__pax_timeout
+msgid "Timeout (ms)"
+msgstr "Délai d'attente (ms)"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_transaction_log_form
+msgid "Transaction"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__transaction_date
+msgid "Transaction Date"
+msgstr "Date de transaction"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__transaction_log_ids
+msgid "Transaction Log"
+msgstr "Journal des transactions"
+
+#. module: pos_payment_pax_terminal_direct
+#: model_terms:ir.ui.view,arch_db:pos_payment_pax_terminal_direct.view_pax_terminal_form
+msgid "Transaction Logs"
+msgstr "Journaux des transactions"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__timeout
+msgid "Transaction Timeout (ms)"
+msgstr "Délai d'attente de transaction (ms)"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_transaction_log__transaction_type
+msgid "Transaction Type"
+msgstr "Type de transaction"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.ui.menu,name:pos_payment_pax_terminal_direct.menu_pax_transactions
+msgid "Transactions"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_direct
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_direct/static/src/app/payment_pax_terminal.esm.js:0
+msgid "Unknown error from PAX terminal"
+msgstr "Erreur inconnue du terminal PAX"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_direct.field_pax_terminal__use_https
+msgid "Use Https"
+msgstr "Utiliser HTTPS"
+
+#. module: pos_payment_pax_terminal_direct
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_direct.selection__pax_transaction_log__transaction_type__04
+msgid "Void"
+msgstr "Annulation"
