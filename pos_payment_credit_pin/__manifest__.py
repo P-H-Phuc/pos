@@ -11,6 +11,9 @@
     "depends": [
         "pos_payment_credit",
     ],
+    "data": [
+        "views/res_users_views.xml",
+    ],
     "assets": {
         "point_of_sale._assets_pos": [
             "pos_payment_credit_pin/static/src/**/*",
