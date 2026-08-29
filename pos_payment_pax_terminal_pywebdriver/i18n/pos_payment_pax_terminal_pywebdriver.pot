@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_payment_pax_terminal_pywebdriver
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 00:00+0000\n"
+"PO-Revision-Date: 2026-07-21 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "Cannot process a transaction with a non-positive amount."
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "No PAX terminal IP is configured for this payment method. Set the Terminal IP field in the payment method settings."
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "Network error contacting the Odoo server."
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "PAX terminal declined: %(msg)s%(code)s"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "Unknown error from pywebdriver"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "PAX Terminal Error"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "OK"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#. odoo-javascript
+#: code:addons/pos_payment_pax_terminal_pywebdriver/static/src/app/payment_pax.esm.js:0
+msgid "Payment declined"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model,name:pos_payment_pax_terminal_pywebdriver.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_terminal_ip
+msgid "Terminal IP"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_terminal_port
+msgid "Terminal Port"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_transaction_type
+msgid "Default Transaction Type"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_pywebdriver.selection__pos_payment_method__pax_pw_transaction_type__01
+msgid "Sale"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_pywebdriver.selection__pos_payment_method__pax_pw_transaction_type__02
+msgid "Return/Refund"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_pywebdriver.selection__pos_payment_method__pax_pw_transaction_type__05
+msgid "Auth Only"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields.selection,name:pos_payment_pax_terminal_pywebdriver.selection__pos_payment_method__pax_pw_transaction_type__06
+msgid "Post-Auth"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_timeout
+msgid "Timeout (ms)"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_use_https
+msgid "Use HTTPS"
+msgstr ""
+
+#. module: pos_payment_pax_terminal_pywebdriver
+#: model:ir.model.fields,field_description:pos_payment_pax_terminal_pywebdriver.field_pos_payment_method__pax_pw_fast_payments
+msgid "Fast Payments"
+msgstr ""

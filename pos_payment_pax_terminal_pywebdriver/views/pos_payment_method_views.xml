@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="pos_payment_method_view_form_pax_pywebdriver" model="ir.ui.view">
+        <field name="name">pos.payment.method.form.pax.pywebdriver</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form" />
+        <field name="arch" type="xml">
+            <field name="use_payment_terminal" position="after">
+                <field
+                    name="pax_pw_terminal_ip"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                    required="use_payment_terminal == 'pax_pywebdriver'"
+                    placeholder="192.168.1.100"
+                />
+                <field
+                    name="pax_pw_terminal_port"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                />
+                <field
+                    name="pax_pw_use_https"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                />
+                <field
+                    name="pax_pw_transaction_type"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                />
+                <field
+                    name="pax_pw_timeout"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                />
+                <field
+                    name="pax_pw_fast_payments"
+                    invisible="use_payment_terminal != 'pax_pywebdriver'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
