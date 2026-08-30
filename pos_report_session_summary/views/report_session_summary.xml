@@ -108,6 +108,9 @@
                                         <th>
                                             <strong>Partner</strong>
                                         </th>
+                                        <th>
+                                            <strong>Account</strong>
+                                        </th>
                                         <th class="text-end">
                                             <strong>Amount</strong>
                                         </th>
@@ -126,6 +129,11 @@
                                         </td>
                                         <td>
                                             <span t-field="line.partner_id" />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-field="line.partner_id.property_account_receivable_id"
+                                            />
                                         </td>
                                         <td class="text-end">
                                             <span t-field="line.amount" />
@@ -164,6 +172,9 @@
                                             <th>
                                                 <strong>Partner</strong>
                                             </th>
+                                            <th>
+                                                <strong>Account</strong>
+                                            </th>
                                             <th class="text-end">
                                                 <strong>Amount</strong>
                                             </th>
@@ -179,6 +190,11 @@
                                             </td>
                                             <td>
                                                 <span t-field="payment.partner_id" />
+                                            </td>
+                                            <td>
+                                                <span
+                                                    t-field="line.partner_id.property_account_receivable_id"
+                                                />
                                             </td>
                                             <td class="text-end">
                                                 <span t-field="payment.amount" />
