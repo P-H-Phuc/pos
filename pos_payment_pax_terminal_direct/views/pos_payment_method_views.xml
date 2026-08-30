@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="pos_payment_method_view_form_pax" model="ir.ui.view">
+        <field name="name">pos.payment.method.form.pax</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form" />
+        <field name="arch" type="xml">
+            <field name="use_payment_terminal" position="after">
+                <field
+                    name="pax_terminal_id"
+                    invisible="use_payment_terminal != 'pax_terminal'"
+                    required="use_payment_terminal == 'pax_terminal'"
+                />
+                <field
+                    name="pax_terminal_ip"
+                    invisible="use_payment_terminal != 'pax_terminal'"
+                />
+                <field
+                    name="pax_terminal_port"
+                    invisible="use_payment_terminal != 'pax_terminal'"
+                />
+                <field
+                    name="pax_transaction_type"
+                    invisible="use_payment_terminal != 'pax_terminal'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
